@@ -1,4 +1,4 @@
-function test() {
+export function Test() {
   const a = 5;
 
   const tambah = () => {
@@ -9,6 +9,7 @@ function test() {
   return (
     <main>
       <button onClick={tambah}>a</button>
+      <h1>testtestest</h1>
     </main>
   );
 }
