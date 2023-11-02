@@ -4,13 +4,20 @@ function test(){
     const a = 5
 
 
-    const tambah = ()=>{
+    const tambah = (a)=>{
 
 
         return a + 5
     }
 
-    tambah()
+    const kurang = (a,b)=>{
+
+
+        return a-b
+    }
+
+    tambah(5)
+    kurang(10,1)
     return(
 
         <>
