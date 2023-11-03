@@ -8,7 +8,8 @@ export default function Home() {
       className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
     >
       <h1>Lets start from here!</h1>
-  
+      <p>Lorem ipsum dolor sit amet</p>
+      <p>wakakaakakaka</p>
     </main>
   );
 }
