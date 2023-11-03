@@ -10,7 +10,7 @@ export default function Home() {
     >
       <h1>Lets start from here!</h1>
       <p>Lorem ipsum dolor sit amet</p>
-  
+      <p>wakakakka</p>
     </main>
   );
 }
