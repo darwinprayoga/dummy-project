@@ -1,6 +1,4 @@
 import { Inter } from "next/font/google";
-import { Test } from "./testferian";
-import { withCoalescedInvoke } from "next/dist/lib/coalesced-function";
 
 const inter = Inter({ subsets: ["latin"] });
 
