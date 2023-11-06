@@ -15,7 +15,7 @@ export default function User() {
       if (user == null) {
         setUser(null);
       } else {
-        setUser(user?.uid);
+        setUser(user);
       }
     });
   }, [setUser]);
@@ -32,9 +32,17 @@ export default function User() {
   return (
     <div>
       {!user ? (
-        <button onClick={googleSignIn}>Login</button>
+        <>
+          <button onClick={googleSignIn}>Login</button>
+        </>
       ) : (
-        <button onClick={logOut}>Logout</button>
+        <>
+          <button onClick={logOut}>Logout</button>
+          <p>{user.photoURL}</p>
+          <img src={user.photoURL} className="w-4" />
+          <p>{user.uid}</p>
+          <p>{user.email}</p>
+        </>
       )}
     </div>
   );
