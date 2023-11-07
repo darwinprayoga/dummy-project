@@ -6,7 +6,7 @@ import {
 } from "firebase/auth";
 import { useEffect, useState } from "react";
 import { auth } from "../../../firebase";
-
+import Link from 'next/link';
 
 const Navbar = () => {
     const [user, setUser] = useState<any | null>(false);
@@ -32,11 +32,15 @@ const Navbar = () => {
 
     return (
         <nav className="bg-white sticky top-0 z-50 flex flex-nowrap justify-between border-b py-4 px-4 xl:px-24 lg:px-18 md:px-12 md:flex-nowrap sm:px-8 sm:flex-nowrap">
-            <div className="pt-1 xl:pt-2"><img src="/embrace.svg"></img></div>
+            <div className="pt-1 xl:pt-2">
+                <Link href="/">
+                    <img src="/embrace.svg"></img>
+                </Link>
+            </div>  
             <div className="text-black flex flex-wrap space-x-4 items-center justify-between font-medium text-sm xl:text-lg md:flex-nowrap md:text-xs sm:text-xs">
-                <a href="#how-it-works">How it works</a>
-                <a href="#our-work">Our Work</a>
-                <a>Pricing</a>
+                <Link href="/#how-it-works">How it works</Link>
+                <Link href="/#our-work">Our Work</Link>
+                <Link href="/listing">Pricing</Link>
                 <a>About Us</a>
             </div>
             <div className="space-x-3 items-center justify-between flex flex-wrap space-x-4 items-center justify-between font-medium text-sm xl:text-lg md:flex-nowrap md:text-xs sm:text-xs">
