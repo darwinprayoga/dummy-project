@@ -7,7 +7,6 @@ export default function Home() {
   return (
     <main className={`bg-white ${inter.className}`}>
       <header>
-        <Navbar />
         <div className="w-screen flex justify-between py-8 px-12 xl:px-24 lg:px-18 md:px-12 md:py-12 sm:px-8 sm:py-8">
           <div className="w-1/2 flex flex-col justify-center space-y-4 xl:space-y-8 xl:py-24 lg:space-y-8 lg:py-24 md:space-y-4 sm:space-y-4">
             <div className="text-black font-bold text-5xl xl:w-2/3 xl:text-7xl lg:w-2/3 lg:text-6xl md:w-4/5 md:text-5xl sm:w-4/5 sm:text-4xl">

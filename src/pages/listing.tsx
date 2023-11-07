@@ -76,7 +76,6 @@ export default function Home() {
 
   return (
     <main className="bg-white ">
-      <Navbar />
       <div className="min-h-screen z-10 w-full max-w-5xl items-center justify-between text-sm ">
         <div className="flex items-center w-screen py-8 px-12 xl:px-24 lg:px-18 md:px-12 md:py-12 sm:px-8 sm:py-8">
           <div className="w-1/2 flex flex-col justify-center space-y-4 xl:space-y-8 xl:py-24 lg:space-y-8 lg:py-24 md:space-y-4 sm:space-y-4">
