@@ -73,28 +73,28 @@ export default function Home() {
             </div>
           </div>  
           <div className="w-1/2 space-y-9 xl:space-y-12 lg:space-y-9 md:space-y-11 md:h-1/2">
-            <div className="flex space-x-4 h-16 md:h-16 lg:h-24">
+            <div className="flex space-x-4 h-16 md:h-16 lg:h-full">
               <img src="/icon/majesticons_dollar-circle.png" alt="icon1"/>
               <div>
                 <h1 className="text-black font-bold text-sm lg:text-2xl">Discovery</h1>
                 <p className="text-black text-xs xl:text-lg lg:text-md md:text-sm">We meet with you to learn about your business, your goals, and your target audience.</p>
               </div>
             </div>
-            <div className="flex space-x-4 h-16 lg:h-full md:h-16 lg:h-24">
+            <div className="flex space-x-4 h-16 md:h-16 lg:h-full">
               <img src="/icon/majesticons_dollar-circle (1).png" alt="icon2"/>
               <div>
                 <h1 className="text-black font-bold text-sm lg:text-2xl">Strategy</h1>
                 <p className="text-black text-xs xl:text-lg lg:text-md md:text-sm">We develop a customized marketing strategy that is based on your unique needs and goals.</p>
               </div>
             </div>
-            <div className="flex space-x-4 h-16 lg:h-full md:h-16 lg:h-24">
+            <div className="flex space-x-4 h-16 md:h-16 lg:h-full">
               <img src="/icon/majesticons_dollar-circle (2).png" alt="icon3"/>
               <div>
                 <h1 className="text-black font-bold text-sm lg:text-2xl">Execution</h1>
                 <p className="text-black text-xs xl:text-lg lg:text-md md:text-sm">We execute our strategy using the latest digital marketing tools and techniques.</p>
               </div>
             </div>
-            <div className="flex space-x-4 h-16 md:h-16 lg:h-full lg:h-24">
+            <div className="flex space-x-4 h-16 md:h-16 lg:h-full">
               <img src="/icon/majesticons_dollar-circle (3).png" alt="icon4"/>
               <div>
                 <h1 className="text-black font-bold text-sm lg:text-2xl">Measurement</h1>
@@ -125,7 +125,33 @@ export default function Home() {
           <div className="flex flex-col items-center">
           <button className="bg-[#3461FF] rounded-xl p-2">See more</button>
           </div>
-
+        </section>
+        <section className="w-screen flex justify-center">
+          <div className="bg-[#232038] w-3/4 rounded-2xl p-8 flex flex-col md:flex-row space-x-4">
+            <div className="w-1/2 space-y-4">
+            <h1 className="text-3xl font-medium">Start Your Journey With Us Now</h1>
+            <button className="bg-[#3461FF] rounded-xl py-2 px-4">Start Now</button>
+            </div>
+            <div className="w-1/2 flex justify-center">
+              <img src="/start-your-journey/Ellipse 86.png" alt="" className="h-40"/>
+            </div>
+          </div>
+        </section>
+        <section className="flex flex-col space-y-8 md:space-x-8 md:flex-row py-4 px-8 md:py-12 md:px-24">
+          <div className="md:w-3/5 md:pr-24">
+            <div className="border-b border-t text-black py-8"><h1>How do i sign up for the project</h1></div>
+            <div className="border-b border-t text-black py-8"><h1>What thing that i should prepare before starting</h1></div>
+            <div className="border-b border-t text-black py-8"><h1>Does my company need help for marketing advices</h1></div>
+          </div>
+          <div className="md:w-2/5 space-y-6">
+            <h1 className="text-black text-4xl font-bold">How We Can Help You?</h1>
+            <p className="text-slate-400">Follow our newsletter. We will regularly update our latest project and availability</p>
+            <div className="space-x-2">
+              <input type="text" className="bg-[#FAFAFA] text-black form-input rounded-xl pl-4 h-8" placeholder="Enter your email"/>
+              <button className="text-white bg-[#3461FF] font-medium rounded-full h-8 px-2">Lets talk</button>
+            </div>
+            <div><a href="" className="text-[#3461FF] font-semibold underline decoration-[#3461FF]">More FAQ</a></div>
+          </div>
         </section>
         <section className="bg-[#FAFAFA] flex justify-between w-screen xl:px-24 py-12 px-24 md:px-12 md:py-8">
           <div className="w-1/2 space-y-12 md:space-y-8">
@@ -136,7 +162,6 @@ export default function Home() {
               <a href="facebook.com"><img src="/contact-us/facebook.png" alt="logo facebook"/></a>
             </div>
             <button className="bg-[#3461FF] rounded-3xl p-3 text-sm w-36">Contact Us</button>
-
           </div>
           <div className="text-black w-1/2 flex grid-rows-3 grid-cols-3 gap-1 font-semibold space-x-8">
             <div className="space-y-4"><ul>Work With Us</ul>
