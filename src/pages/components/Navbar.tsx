@@ -43,7 +43,7 @@ const Navbar = () => {
                 <Link href="/listing">Pricing</Link>
                 <a>About Us</a>
             </div>
-            <div className="space-x-3 items-center justify-between flex flex-wrap space-x-4 items-center justify-between font-medium text-sm xl:text-lg md:flex-nowrap md:text-xs sm:text-xs">
+            <div className="space-x-4 justify-between flex flex-wrap items-center font-medium text-sm xl:text-lg md:flex-nowrap md:text-xs sm:text-xs">
             <button className="text-black rounded-xl p-2 xl:py-2 xl:px-3 xl:text-lg lg:text-xs lg:p-2 md:p-1 md:text-xs md:rounded-1 md:mx-0 sm:text-xs">Book A Call</button>
             {!user ? (
                     <button className="bg-[#3461FF] rounded-xl p-2 xl:py-2 xl:px-3 xl:text-lg lg:text-xs lg:p-2 md:p-1 md:text-xs md:rounded-1 md:mx-0 sm:text-xs" onClick={googleSignIn}>Login</button>
