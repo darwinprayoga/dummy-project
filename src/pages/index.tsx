@@ -188,7 +188,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="h-screen flex flex-col px-24 py-12 font-sans space-y-12">
+      <section className="flex flex-col px-24 py-12 font-sans space-y-12">
       <div className="flex justify-center">
         <div className="w-3/5 flex flex-col space-y-4">
           <div className="flex h-full space-x-4">
@@ -211,7 +211,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="h-1/2 flex flex-col space-y-4">
+      <div className="flex flex-col space-y-4">
         <div>
           <div><h1 className="text-black text-5xl font-semibold">What Our Client Said About Us</h1></div>
           <div className="space-x-2"><button></button><button></button></div>
@@ -264,7 +264,7 @@ export default function Home() {
             <button className="bg-[#3461FF] rounded-full py-4 px-8 text-xl">Start Now</button>
             </div>
             <div className="w-2/5 flex justify-center">
-            <div className="bg-[#E0FF22] h-full w-2/3 flex justify-center items-center rounded-full">
+            <div className="bg-[#E0FF22] aspect-square flex justify-center items-center rounded-full">
               <img src="/start-your-journey/Vector-1.png" alt="" className="w-1/4"/>
               <img src="/start-your-journey/Vector.png" alt="" className="w-1/2"/>
             </div>
