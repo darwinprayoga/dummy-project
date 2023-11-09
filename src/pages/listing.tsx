@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import {
   collection,
   addDoc,
-  getDocs,
-  QuerySnapshot,
   query,
   onSnapshot,
   deleteDoc,
@@ -11,14 +9,12 @@ import {
   updateDoc,
 } from "firebase/firestore";
 import { db } from "../../firebase";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-
   //useState array data dari firestore database
-  const [items, setItems] = useState<Array<{ name: string; price: string; id: string }>>([]);
+  const [items, setItems] = useState<
+    Array<{ name: string; price: string; id: string }>
+  >([]);
 
   //useState yang digunakan untuk menyimpan data item yang akan ditambahkan ke database.
   const [newItem, setNewItem] = useState<{
@@ -26,7 +22,6 @@ export default function Home() {
     price: string;
     id: string;
   }>({ name: "", price: "", id: "" });
-
 
   const [editItem, setEditItem] = useState<{
     name: string;
@@ -105,7 +100,6 @@ export default function Home() {
 
   return (
     <main className="bg-white ">
-
       <div className="min-h-screen z-10 w-full max-w-5xl items-center justify-between text-sm ">
         <div className="flex items-center w-screen py-8 px-12 xl:px-24 lg:px-18 md:px-12 md:py-12 sm:px-8 sm:py-8">
           <div className="w-1/2 flex flex-col justify-center space-y-4 xl:space-y-8 xl:py-24 lg:space-y-8 lg:py-24 md:space-y-4 sm:space-y-4">
@@ -125,7 +119,9 @@ export default function Home() {
           <div className="shadow-2xl bg-white rounded-lg items-center justify-between p-6 h-min">
             <form className="grid grid-cols-6 items-center text-black ">
               <input
-                value={isEditing ? (editItem ? editItem.name : "") : newItem.name}
+                value={
+                  isEditing ? (editItem ? editItem.name : "") : newItem.name
+                }
                 className="col-span-3 p-3 border rounded-lg hover:border-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
                 onChange={(e) =>
                   isEditing && editItem
@@ -134,8 +130,10 @@ export default function Home() {
                 }
               />
               <input
-              type="number"
-                value={isEditing ? (editItem ? editItem.price : "") : newItem.price}
+                type="number"
+                value={
+                  isEditing ? (editItem ? editItem.price : "") : newItem.price
+                }
                 className="col-span-2 p-3 border mx-3 rounded-lg hover:border-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 "
                 onChange={(e) =>
                   isEditing && editItem
