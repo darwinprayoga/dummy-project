@@ -6,9 +6,9 @@ export default function Home() {
   return (
     <main className={`bg-white ${inter.className}`}>
       <header>
-        <div className="w-screen flex justify-between py-8 px-12 xl:px-24 lg:px-18 md:px-12 md:py-12 sm:px-8 sm:py-8">
-          <div className="w-1/2 flex flex-col justify-center space-y-4 xl:space-y-8 xl:py-24 lg:space-y-8 lg:py-24 md:space-y-4 sm:space-y-4">
-            <div className="text-black font-bold text-5xl xl:w-2/3 xl:text-7xl lg:w-2/3 lg:text-6xl md:w-4/5 md:text-5xl sm:w-4/5 sm:text-4xl">
+        <div className="flex flex-col-reverse items-center md:items-start md:flex-row justify-between py-8 px-8 xl:px-24 lg:px-18 md:px-12 md:py-12 sm:px-8 sm:py-8">
+          <div className="md:w-1/2 flex flex-col py-8 justify-center space-y-4 xl:space-y-8 xl:py-24 lg:space-y-8 lg:py-24 md:space-y-4 sm:space-y-4">
+            <div className="w-3/4 text-black font-bold text-5xl xl:w-2/3 xl:text-7xl lg:w-2/3 lg:text-6xl md:w-4/5 md:text-5xl sm:w-4/5 sm:text-4xl">
               We Take Care of Your Brand
             </div>
             <p className="text-black text-xs lg:text-lg md:text-sm sm:text-sm sm:w-3/4">
@@ -25,7 +25,7 @@ export default function Home() {
               </button>
             </div>
           </div>
-          <div className="w-1/2">
+          <div className="md:w-1/2">
             <img src="/image-header.png" alt="image-header" />
           </div>
         </div>
@@ -34,13 +34,17 @@ export default function Home() {
         <h1 className="text-black font-medium pt-12 text-2xl">
           Companies We Work With
         </h1>
-        <div className="space-y-8 py-12">
+        <div className="space-x-4 md:space-x-0 md:space-y-8 md:py-12 flex flex-row md:hidden">
+          <img src="/mobile-ver/companies/frame 56.png"></img>
+          <img src="/mobile-ver/companies/frame 57.png"></img>
+        </div>
+        <div className="space-x-4 md:space-x-0 md:space-y-8 md:py-12 md:flex md:flex-col hidden">
           <img src="/frame/frame 56.png"></img>
           <img src="/frame/frame 57.png"></img>
         </div>
       </section>
-      <section className="flex justify-center w-screen py-8 px-8 lg:py-24 lg:px-24 md:py-12 md:px-12">
-        <div className="w-1/2 grid gap-4 grid-cols-2 grid-rows-2">
+      <section className="flex flex-col md:flex-row justify-center md:items-start py-8 px-8 lg:py-24 lg:px-24 md:py-12 md:px-12">
+        <div className="md:w-1/2 grid gap-4 grid-cols-2 grid-rows-2 flex-col items-center p-4">
           <div className="text-black">
             <h1 className="font-bold text-3xl lg:text-5xl md:text-4xl">245%</h1>
             <p className="text-slate-400 text-xs lg:text-md md:text-sm">
@@ -68,7 +72,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="w-1/2 space-y-4">
+        <div className="p-4 md:w-1/2 space-y-4">
           <h1 className="text-black font-medium text-3xl lg:text-5xl md:text-4xl">
             Commitments
           </h1>
@@ -83,9 +87,8 @@ export default function Home() {
       </section>
       <section
         id="how-it-works"
-        className=" w-screen flex justify-between px-8 py-8 lg:px-24 space-x-8 lg:space-x-12 lg:py-12 md:px-12 md:h-1/2"
-      >
-        <div className="w-1/2 space-y-12 md:h-1/2">
+        className="flex flex-col md:flex-row justify-between px-8 py-8 lg:px-24 md:space-x-8 lg:space-x-12 lg:py-12 md:px-12 md:h-1/2">
+        <div className="md:w-1/2 space-y-12 md:h-1/2 py-4">
           <div className="space-y-2 md:space-y-4">
             <h1 className="text-black font-medium text-3xl lg:text-6xl md:text-4xl">
               How It Works
@@ -100,7 +103,7 @@ export default function Home() {
             <img src="image-section3.png" alt="a Keyboard" className="w-full" />
           </div>
         </div>
-        <div className="w-1/2 space-y-9 xl:space-y-12 lg:space-y-9 md:space-y-11 md:h-1/2">
+        <div className="md:w-1/2 space-y-9 xl:space-y-12 lg:space-y-9 md:space-y-11 md:h-1/2 py-4">
           <div className="flex space-x-4 h-16 md:h-16 lg:h-28">
             <img src="/icon/majesticons_dollar-circle.png" alt="icon1" />
             <div>
@@ -151,12 +154,13 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="our-work" className="space-y-4 py-12 px-24 md:h-1/2">
-        <div className="flex flex-col items-center space-y-4 lg:space-y-2">
+      <section id="our-work" className="space-y-12 py-12 px-4 md:h-1/2">
+        <div className="px-12 space-y-12">
+        <div className="flex flex-col items-center space-y-2 lg:space-y-2">
           <h1 className="text-black font-medium text-5xl">Our Work</h1>
-          <p className="text-black">A glimpse of our portofolio</p>
+          <p className="text-black text-sm">A glimpse of our portofolio</p>
         </div>
-        <div className="grid-rows-3 gap-2 flex items-center justify-between">
+        <div className="grid-rows-3 gap-2 flex flex-col md:flex-row items-center justify-between px-8">
           <div className="space-y-2">
             <img src="/our-work/Rectangle 161.png" alt="apple" />
             <h1 className="text-black font-bold flex justify-center">Apple</h1>
@@ -173,62 +177,63 @@ export default function Home() {
           </div>
         </div>
         <div className="flex flex-col items-center">
-          <button className="bg-[#3461FF] rounded-xl p-2">See more</button>
+          <button className="bg-[#3461FF] rounded-3xl py-2 px-4 md:px-8">See more</button>
+        </div>
         </div>
         <div className="flex justify-center h-1/2 py-4 lg:px-24 px-4">
-          <div className="bg-[#3561FF] bg-[url('/elevate-your-brand/Background.png')] w-full rounded-2xl md:px-12 py-24 items-center flex flex-col md:flex-row space-y-8 md:space-y-0">
-            <div className="w-1/2 py-4 flex justify-center md:justify-start">
-              <h1 className="text-5xl font-medium w-3/4 text-center md:text-left">
+          <div className="bg-[#3561FF] bg-[url('/elevate-your-brand/Background.png')] bg-cover w-full rounded-2xl md:px-12 py-2 md:py-16 flex flex-row md:space-y-0">
+            <div className="w-1/2 py-4 flex justify-center items-center md:justify-start">
+              <h1 className="text-xl md:text-6xl font-medium w-3/4">
                 Elevate Your Brand Today!
               </h1>
             </div>
-            <div className="w-1/2 flex flex-col space-y-10 py-6">
-              <p className="text-center md:text-left">
+            <div className="w-1/2 flex flex-col space-y-4 md:space-y-10 md:py-6 py-2">
+              <p className="text-xs md:text-xl">
                 Ready to transform your digital dresence? Let's create magic
                 together! book our services now!
               </p>
-              <button className="bg-white text-black rounded-xl p-2 md:w-1/2 lg:w-1/3">
-                Book Now
+              <button className="bg-white text-black rounded-3xl p-2 md:p-4 w-1/2 lg:w-1/3">
+                Book Call
               </button>
             </div>
           </div>
         </div>
       </section>
-      <section className="flex flex-col px-24 py-12 font-sans space-y-12 w-screen">
-        <div className="w-full xl:space-x-0 space-x-4 flex justify-center py-24 flex-col-reverse lg:flex-row items-center lg:items-start">
-          <div className="lg:w-3/5 md:flex lg:flex-col lg:space-y-8 py-12 lg:py-0 md:flex-col hidden">
-            <div className="flex h-full space-x-4">
-              <img src="/meet-our-team/Rectangle 184.png" alt="" />
-              <img src="/meet-our-team/Rectangle 185.png" alt="" />
-              <img src="/meet-our-team/Rectangle 181.png  " alt="" />
+      <section className="flex flex-col py-12 font-sans space-y-12">
+        <div className="w-full px-4 flex justify-center flex-col lg:flex-row items-center lg:items-start">
+          <div className="lg:w-3/5 md:flex lg:flex-col space-y-4 py-12 lg:py-0 md:flex-col items-center">
+            <div className="flex space-x-4 h-28 px-2">
+              <img src="/meet-our-team/Rectangle 184.png" alt="" className="aspect-square"/>
+              <img src="/meet-our-team/Rectangle 185.png" alt="" className="aspect-square"/>
+              <img src="/meet-our-team/Rectangle 181.png  " alt="" className="aspect-square"/>
             </div>
-            <div className="flex h-full space-x-4">
+            <div className="flex space-x-4 h-28 px-2">
               <img src="/meet-our-team/Rectangle 182.png" alt="" />
               <img src="/meet-our-team/Rectangle 183.png" alt="" />
               <img src="/meet-our-team/Rectangle 186.png" alt="" />
             </div>
           </div>
           <div className="md:w-2/5 lg:space-y-24 xl:space-y-32 space-y-8 xl:py-4">
-            <div className="space-y-12 h-1/2">
-              <h1 className="text-black text-5xl xl:w-full font-semibold lg:text-left text-center">
+            <div className="space-y-4 h-1/2 px-8">
+              <h1 className="w-full text-black text-4xl xl:w-full font-semibold">
                 Meet Our Team
               </h1>
-              <p className="text-slate-400 lg:text-left text-center lg:w-3/5">
+              <p className="text-slate-400 text-xs lg:w-3/5">
                 Discover the brilliance behind Embrace. Our team blends
                 innovation and artistry to craft digital wonders that captivate
               </p>
             </div>
-            <div className="flex justify-center lg:justify-start py-8 md:py-0">
-              <button className="bg-[#3461FF] rounded-full py-4 px-12 h-1/2 text-2xl">
+            <div className="flex lg:justify-start py-8 md:py-0 px-6">
+              <button className="bg-[#3461FF] rounded-full py-2 px-4 md:py-4 md:px-12 md:text-2xl">
                 Learn more
               </button>
             </div>
           </div>
         </div>
-        <div className="flex flex-col space-y-4">
-          <div className="flex justify-between">
+        <div className="flex flex-col space-y-12 px-12">
+          <div className="flex md:justify-between justify-center">
             <div>
-              <h1 className="text-black text-5xl font-semibold text-center lg:text-left">
+              <h1 className="text-black md:text-5xl text-xl text-center font-semibold">
                 What Our Client Said About Us
               </h1>
             </div>
@@ -257,7 +262,7 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <p>
+                <p className="text-xs md:text-md md:font-normal font-thin">
                   My vision came alive effortlessly. Their blend of casual and
                   professional approach made the process a breeze. Creativity
                   flowed, and the results were beyond my expectations.
@@ -279,7 +284,7 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <p>
+                <p className="text-xs md:text-md md:font-normal font-thin">
                   I found the digital expertise I needed. Their
                   creative-professional balance exceeded expectations. Friendly
                   interactions, exceptional outcomes. For digital enchantment,
@@ -302,7 +307,7 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <p>
+                <p className="text-xs md:text-md md:font-normal font-thin">
                   Embrace really nails it! Creative brilliance, approachable
                   style. They're the partners you want—artistry meets strategy.
                   Thrilled with what they achieved!"
@@ -312,18 +317,18 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="space-y-12 my-24">
-        <div className="w-screen h-1/2 flex justify-center">
-          <div className="bg-[#232038] bg-[url('/start-your-journey/background.png')] w-3/4 rounded-2xl p-4 lg:p-8 flex flex-col md:flex-row space-y-8 md:space-y-0">
-            <div className="w-full md:w-3/5 p-8 space-y-12 flex flex-col justify-center md:flex-none">
-              <h1 className="text-3xl lg:text-5xl text-center md:text-left">
+      <section className="space-y-12">
+        <div className="h-1/2 flex justify-center px-4">
+          <div className="bg-[#232038] bg-[url('/start-your-journey/background.png')] bg-cover w-full rounded-2xl lg:p-8 flex flex-row">
+            <div className="w-3/5 p-8 space-y-4 flex flex-col justify-center md:flex-none">
+              <h1 className="text-lg md:text-3xl lg:text-5xl">
                 Start Your Journey With Us Now
               </h1>
-              <button className="bg-[#3461FF] rounded-full lg:py-4 lg:px-8 py-2 lg:text-xl text-md md:w-1/2">
+              <button className="bg-[#3461FF] rounded-full lg:py-4 lg:px-8 py-2 px-4 lg:text-xl text-xs w-2/3">
                 Start Now
               </button>
             </div>
-            <div className="md:w-2/5 md:flex md:justify-center hidden h-max align-middle py-12">
+            <div className="w-2/5 flex justify-center p-6">
               <div className="bg-[#E0FF22] aspect-square flex justify-center items-center align-center rounded-full">
                 <img
                   src="/start-your-journey/Vector-1.png"
@@ -341,31 +346,31 @@ export default function Home() {
         </div>
         <div className="flex flex-col space-y-8 md:space-y-0 md:space-x-0 md:flex-row px-8 md:py-12 md:px-24">
           <div className="md:w-3/5 md:pr-24 md:py-8">
-            <div className="border-t text-black py-8">
+            <div className="border-t text-black text-xs py-4 md:py-8">
               <h1>How do i sign up for the project</h1>
             </div>
-            <div className="border-b border-t text-black py-8">
+            <div className="border-b border-t text-xs text-black py-4 md:py-8">
               <h1>What thing that i should prepare before starting</h1>
             </div>
-            <div className="border-b text-black py-8">
+            <div className="border-b text-black text-xs py-4 md:py-8">
               <h1>Does my company need help for marketing advices</h1>
             </div>
           </div>
-          <div className="md:w-2/5 space-y-8 py-2 flex flex-col md:flex-none items-center md:items-start">
-            <h1 className="text-black text-4xl font-bold">
+          <div className="md:w-2/5 md:space-y-8 space-y-2 py-2 flex flex-col">
+            <h1 className="text-black text-2xl md:text-4xl font-bold">
               How We Can Help You?
             </h1>
             <p className="text-slate-400 lg:w-2/5">
               Follow our newsletter. We will regularly update our latest project
               and availability
             </p>
-            <div className="space-x-2 space-y-1">
+            <div className="md:space-x-2 w-full py-4">
               <input
                 type="text"
-                className="bg-[#FAFAFA] text-black form-input rounded-3xl pl-4 h-12"
+                className="bg-[#FAFAFA] text-black form-input rounded-3xl pl-4 h-12 w-2/4"
                 placeholder="Enter your email"
               />
-              <button className="text-white bg-[#3461FF] font-medium rounded-full h-12 px-8">
+              <button className="text-white bg-[#3461FF] font-medium rounded-full h-12 w-1/4">
                 Lets talk
               </button>
             </div>
@@ -380,8 +385,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-[#FAFAFA] flex justify-between px-8 w-screen xl:px-24 py-12 md:px-12 md:py-8">
-        <div className="w-1/2 space-y-12 md:space-y-8">
+      <section className="bg-[#FAFAFA] flex flex-col md:flex-row justify-between px-8 xl:px-24 py-12 md:px-12 md:py-8 space-y-8 md:space-y-0">
+        <div className="md:w-1/2 md:space-y-8 flex justify-between md:flex-col">
+          <div className="space-y-8">
           <img src="/embrace.svg" alt="logo embrace" />
           <div className="flex justify-between w-36">
             <a href="instagram.com" className="hover:scale-105">
@@ -402,11 +408,14 @@ export default function Home() {
               />
             </a>
           </div>
+          </div>
+          <div className="items-center flex">
           <button className="bg-[#3461FF] rounded-3xl p-3 text-sm w-36 hover:scale-105">
             Contact Us
           </button>
+          </div>
         </div>
-        <div className="text-black w-1/2 flex grid-rows-3 grid-cols-3 gap-1 font-semibold space-x-12">
+        <div className="text-black w-full md:w-1/2 flex grid-rows-3 grid-cols-3 gap-1 font-semibold space-x-12">
           <div className="space-y-4">
             <ul className="hover:scale-105">
               <a href="">Work With Us</a>
@@ -448,9 +457,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <footer className="bg-black h-4 flex justify-between p-8">
-        <p>2022 Embrace, inc - All Right Reserved</p>
-        <div className="flex space-x-40">
+      <footer className="bg-black h-4 p-4 flex justify-between md:p-8 md:text-normal text-xs">
+        <p className="w-2/4">2022 Embrace, inc - All Right Reserved</p>
+        <div className="flex md:space-x-40 w-2/4 space-x-4 justify-between">
           <p>Terms of use</p>
           <p>Privacy Policy</p>
         </div>
