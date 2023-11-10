@@ -6,7 +6,7 @@ import {
 } from "firebase/auth";
 import { useEffect, useState } from "react";
 import { auth } from "../../../firebase";
-import Link from 'next/link';
+import Link from "next/link";
 
 const Navbar = () => {
     const [user, setUser] = useState<any | null>(false);
