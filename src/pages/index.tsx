@@ -202,15 +202,15 @@ export default function Home() {
       <section className="flex flex-col py-12 font-sans space-y-12">
         <div className="w-full px-4 flex justify-center flex-col lg:flex-row items-center lg:items-start">
           <div className="lg:w-3/5 md:flex lg:flex-col space-y-4 py-12 lg:py-0 md:flex-col items-center">
-            <div className="flex space-x-4 h-28 px-2">
+            <div className="flex space-x-4 h-28 md:h-full px-2">
               <img src="/meet-our-team/Rectangle 184.png" alt="" className="aspect-square"/>
               <img src="/meet-our-team/Rectangle 185.png" alt="" className="aspect-square"/>
               <img src="/meet-our-team/Rectangle 181.png  " alt="" className="aspect-square"/>
             </div>
-            <div className="flex space-x-4 h-28 px-2">
-              <img src="/meet-our-team/Rectangle 182.png" alt="" />
-              <img src="/meet-our-team/Rectangle 183.png" alt="" />
-              <img src="/meet-our-team/Rectangle 186.png" alt="" />
+            <div className="flex space-x-4 h-28 md:h-full px-2" >
+              <img src="/meet-our-team/Rectangle 182.png" alt="" className="aspect-square"/>
+              <img src="/meet-our-team/Rectangle 183.png" alt="" className="aspect-square"/>
+              <img src="/meet-our-team/Rectangle 186.png" alt="" className="aspect-square"/>
             </div>
           </div>
           <div className="md:w-2/5 lg:space-y-24 xl:space-y-32 space-y-8 xl:py-4">
@@ -218,7 +218,7 @@ export default function Home() {
               <h1 className="w-full text-black text-4xl xl:w-full font-semibold">
                 Meet Our Team
               </h1>
-              <p className="text-slate-400 text-xs lg:w-3/5">
+              <p className="text-slate-400 text-xs md:text-lg lg:w-3/5">
                 Discover the brilliance behind Embrace. Our team blends
                 innovation and artistry to craft digital wonders that captivate
               </p>
@@ -262,7 +262,7 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <p className="text-xs md:text-md md:font-normal font-thin">
+                <p className="text-xs md:text-sm md:text-md md:font-normal font-thin">
                   My vision came alive effortlessly. Their blend of casual and
                   professional approach made the process a breeze. Creativity
                   flowed, and the results were beyond my expectations.
@@ -284,7 +284,7 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <p className="text-xs md:text-md md:font-normal font-thin">
+                <p className="text-xs md:text-sm md:font-normal font-thin">
                   I found the digital expertise I needed. Their
                   creative-professional balance exceeded expectations. Friendly
                   interactions, exceptional outcomes. For digital enchantment,
@@ -307,7 +307,7 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <p className="text-xs md:text-md md:font-normal font-thin">
+                <p className="text-xs md:text-sm md:font-normal font-thin">
                   Embrace really nails it! Creative brilliance, approachable
                   style. They're the partners you want—artistry meets strategy.
                   Thrilled with what they achieved!"
@@ -318,17 +318,17 @@ export default function Home() {
         </div>
       </section>
       <section className="space-y-12">
-        <div className="h-1/2 flex justify-center px-4">
+        <div className="h-1/2 flex justify-center px-4 md:px-24">
           <div className="bg-[#232038] bg-[url('/start-your-journey/background.png')] bg-cover w-full rounded-2xl lg:p-8 flex flex-row">
-            <div className="w-3/5 p-8 space-y-4 flex flex-col justify-center md:flex-none">
+            <div className="w-3/5 p-8 space-y-4 md:space-y-12 flex flex-col justify-center md:flex-none">
               <h1 className="text-lg md:text-3xl lg:text-5xl">
                 Start Your Journey With Us Now
               </h1>
-              <button className="bg-[#3461FF] rounded-full lg:py-4 lg:px-8 py-2 px-4 lg:text-xl text-xs w-2/3">
+              <button className="bg-[#3461FF] rounded-full lg:py-4 lg:px-8 py-2 px-4 lg:text-xl text-xs w-2/3 md:w-1/3">
                 Start Now
               </button>
             </div>
-            <div className="w-2/5 flex justify-center p-6">
+            <div className="w-2/5 flex justify-center p-6 md:p-0">
               <div className="bg-[#E0FF22] aspect-square flex justify-center items-center align-center rounded-full">
                 <img
                   src="/start-your-journey/Vector-1.png"
@@ -346,13 +346,13 @@ export default function Home() {
         </div>
         <div className="flex flex-col space-y-8 md:space-y-0 md:space-x-0 md:flex-row px-8 md:py-12 md:px-24">
           <div className="md:w-3/5 md:pr-24 md:py-8">
-            <div className="border-t text-black text-xs py-4 md:py-8">
+            <div className="border-t text-black text-xs md:text-lg py-4 md:py-8">
               <h1>How do i sign up for the project</h1>
             </div>
-            <div className="border-b border-t text-xs text-black py-4 md:py-8">
+            <div className="border-b border-t text-xs md:text-lg text-black py-4 md:py-8">
               <h1>What thing that i should prepare before starting</h1>
             </div>
-            <div className="border-b text-black text-xs py-4 md:py-8">
+            <div className="border-b text-black text-xs md:text-lg py-4 md:py-8">
               <h1>Does my company need help for marketing advices</h1>
             </div>
           </div>
@@ -367,7 +367,7 @@ export default function Home() {
             <div className="md:space-x-2 w-full py-4">
               <input
                 type="text"
-                className="bg-[#FAFAFA] text-black form-input rounded-3xl pl-4 h-12 w-2/4"
+                className="bg-[#FAFAFA] text-black form-input rounded-3xl pl-4 h-12 w-2/4 md:w-2/3"
                 placeholder="Enter your email"
               />
               <button className="text-white bg-[#3461FF] font-medium rounded-full h-12 w-1/4">
