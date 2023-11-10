@@ -1,10 +1,8 @@
-import { Inter } from "next/font/google";
 import type { NextPage } from "next";
 
-const inter = Inter({ subsets: ["latin"] });
 const Home: NextPage = () => {
   return (
-    <main className={`bg-white ${inter.className}`}>
+    <main>
       <header>
         <div className="flex flex-col-reverse items-center md:items-start md:flex-row justify-between py-8 px-8 xl:px-24 lg:px-18 md:px-12 md:py-12 sm:px-8 sm:py-8">
           <div className="md:w-1/2 flex flex-col py-8 justify-center space-y-4 xl:space-y-8 xl:py-24 lg:space-y-8 lg:py-24 md:space-y-4 sm:space-y-4">
@@ -206,16 +204,28 @@ const Home: NextPage = () => {
       </section>
       <section className="flex flex-col px-12 py-12 font-sans space-y-12">
         <div className="flex flex-col justify-center">
-          <div className="flex flex-col space-y-4">
-            <div className="flex space-x-4 h-24 w-24">
-              <img src="/meet-our-team/Rectangle 184.png" alt="" className="aspect-square"/>
-              <img src="/meet-our-team/Rectangle 185.png" alt="" className="aspect-square"/>
-              <img src="/meet-our-team/Rectangle 181.png  " alt="" className="aspect-square"/>
+          <div className="flex flex-col">
+            <div className="flex">
+              <div className="w-1/3">
+                <img width={"100%"} src="/meet-our-team/Rectangle 184.png" />
+              </div>
+              <div className="w-1/3">
+                <img width={"100%"} src="/meet-our-team/Rectangle 185.png" />
+              </div>
+              <div className="w-1/3">
+                <img width={"100%"} src="/meet-our-team/Rectangle 181.png" />
+              </div>
             </div>
-            <div className="flex space-x-4 h-24 w-24">
-              <img src="/meet-our-team/Rectangle 182.png" alt="" className="aspect-square"/>
-              <img src="/meet-our-team/Rectangle 183.png" alt="" className="aspect-square"/>
-              <img src="/meet-our-team/Rectangle 186.png" alt="" className="aspect-square"/>
+            <div className="flex">
+              <div className="w-1/3">
+                <img width={"100%"} src="/meet-our-team/Rectangle 182.png" />
+              </div>
+              <div className="w-1/3">
+                <img width={"100%"} src="/meet-our-team/Rectangle 183.png" />
+              </div>
+              <div className="w-1/3">
+                <img width={"100%"} src="/meet-our-team/Rectangle 186.png" />
+              </div>
             </div>
           </div>
           <div className="w-2/5 space-y-24">
@@ -330,17 +340,8 @@ const Home: NextPage = () => {
               </button>
             </div>
             <div className="w-2/5 flex justify-center p-6 md:p-0">
-              <div className="bg-[#E0FF22] aspect-square flex justify-center items-center align-center rounded-full">
-                <img
-                  src="/start-your-journey/Vector-1.png"
-                  alt=""
-                  className="w-1/4"
-                />
-                <img
-                  src="/start-your-journey/Vector.png"
-                  alt=""
-                  className="w-1/2"
-                />
+              <div>
+                <img src="/start-your-journey/Group 2192.png" />
               </div>
             </div>
           </div>
@@ -416,7 +417,7 @@ const Home: NextPage = () => {
             </button>
           </div>
         </div>
-        <div className="text-black w-full md:w-1/2 flex grid-rows-3 grid-cols-3 gap-1 font-semibold space-x-12">
+        <div className="text-black w-full md:w-1/2 grid grid-rows-3 grid-cols-3 gap-1 font-semibold space-x-12">
           <div className="space-y-4">
             <ul className="hover:scale-105">
               <a href="">Work With Us</a>
