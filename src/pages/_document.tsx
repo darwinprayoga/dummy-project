@@ -4,7 +4,6 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
-      //this project is code by Jaka as BE & Ilmi as FE
       <body>
         <Main />
         <NextScript />
