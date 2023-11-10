@@ -31,12 +31,12 @@ export default function Home() {
         </div>
       </header>
       <section className="bg-[#FAFAFA] flex flex-col items-center px-8 space-y-4 lg:px-24 md:px-12">
-        <h1 className="text-black font-medium pt-12 text-2xl">
+        <h1 className="text-black font-medium pt-8 text-2xl">
           Companies We Work With
         </h1>
-        <div className="space-x-4 md:space-x-0 md:space-y-8 md:py-12 flex flex-row md:hidden">
-          <img src="/mobile-ver/companies/frame 56.png"></img>
-          <img src="/mobile-ver/companies/frame 57.png"></img>
+        <div className="space-x-4 flex flex-row md:hidden w-full justify-center py-4">
+          <img src="/mobile-ver/companies/frame 56.png" className="w-1/4"></img>
+          <img src="/mobile-ver/companies/frame 57.png" className="w-1/4"></img>
         </div>
         <div className="space-x-4 md:space-x-0 md:space-y-8 md:py-12 md:flex md:flex-col hidden">
           <img src="/frame/frame 56.png"></img>
@@ -202,12 +202,12 @@ export default function Home() {
       <section className="flex flex-col py-12 font-sans space-y-12">
         <div className="w-full px-4 flex justify-center flex-col lg:flex-row items-center lg:items-start">
           <div className="lg:w-3/5 md:flex lg:flex-col space-y-4 py-12 lg:py-0 md:flex-col items-center">
-            <div className="flex space-x-4 h-28 md:h-full px-2">
+            <div className="flex space-x-4 h-24 md:h-full w-4/5">
               <img src="/meet-our-team/Rectangle 184.png" alt="" className="aspect-square"/>
               <img src="/meet-our-team/Rectangle 185.png" alt="" className="aspect-square"/>
               <img src="/meet-our-team/Rectangle 181.png  " alt="" className="aspect-square"/>
             </div>
-            <div className="flex space-x-4 h-28 md:h-full px-2" >
+            <div className="flex space-x-4 h-24 md:h-full w-4/5" >
               <img src="/meet-our-team/Rectangle 182.png" alt="" className="aspect-square"/>
               <img src="/meet-our-team/Rectangle 183.png" alt="" className="aspect-square"/>
               <img src="/meet-our-team/Rectangle 186.png" alt="" className="aspect-square"/>
