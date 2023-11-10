@@ -184,10 +184,10 @@ const Home: NextPage = () => {
               See more
             </button>
           </div>
-          <div className="flex justify-center h-1/2 py-4 px-24">
-            <div className="bg-[#3561FF] bg-[url('/elevate-your-brand/Background.png')] w-full rounded-2xl px-12 py-24 flex flex-col md:flex-row space-y-8 md:space-y-0">
+          <div className="flex justify-center h-1/2 py-4 md:px-24 ">
+            <div className="bg-[#3561FF] bg-[url('/elevate-your-brand/Background.png')] w-full rounded-2xl px-12 py-8 flex flex-row space-y-8 md:space-y-0">
               <div className="w-1/2 py-4">
-                <h1 className="text-5xl font-medium w-3/4">
+                <h1 className="text-3xl font-medium w-1/2">
                   Elevate Your Brand Today!
                 </h1>
               </div>
@@ -204,18 +204,18 @@ const Home: NextPage = () => {
           </div>
         </div>
       </section>
-      <section className="flex flex-col px-24 py-12 font-sans space-y-12">
-        <div className="flex justify-center">
-          <div className="w-3/5 flex flex-col space-y-4">
-            <div className="flex h-full space-x-4">
-              <img src="/meet-our-team/Rectangle 184.png" alt="" />
-              <img src="/meet-our-team/Rectangle 185.png" alt="" />
-              <img src="/meet-our-team/Rectangle 181.png  " alt="" />
+      <section className="flex flex-col px-12 py-12 font-sans space-y-12">
+        <div className="flex flex-col justify-center">
+          <div className="flex flex-col space-y-4">
+            <div className="flex space-x-4 h-24 w-24">
+              <img src="/meet-our-team/Rectangle 184.png" alt="" className="aspect-square"/>
+              <img src="/meet-our-team/Rectangle 185.png" alt="" className="aspect-square"/>
+              <img src="/meet-our-team/Rectangle 181.png  " alt="" className="aspect-square"/>
             </div>
-            <div className="flex h-full space-x-4">
-              <img src="/meet-our-team/Rectangle 182.png" alt="" />
-              <img src="/meet-our-team/Rectangle 183.png" alt="" />
-              <img src="/meet-our-team/Rectangle 186.png" alt="" />
+            <div className="flex space-x-4 h-24 w-24">
+              <img src="/meet-our-team/Rectangle 182.png" alt="" className="aspect-square"/>
+              <img src="/meet-our-team/Rectangle 183.png" alt="" className="aspect-square"/>
+              <img src="/meet-our-team/Rectangle 186.png" alt="" className="aspect-square"/>
             </div>
           </div>
           <div className="w-2/5 space-y-24">
@@ -235,10 +235,10 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col space-y-4">
+        <div className="flex flex-col space-y-4 items-center">
           <div>
             <div>
-              <h1 className="text-black text-5xl font-semibold">
+              <h1 className="text-black text-3xl font-semibold">
                 What Our Client Said About Us
               </h1>
             </div>
@@ -247,8 +247,8 @@ const Home: NextPage = () => {
               <button></button>
             </div>
           </div>
-          <div className="flex space-x-4 w-full">
-            <div className="bg-[#FAFAFA] hover:bg-[#3461FF] text-black hover:text-white transition duration-300 ease-in-out p-8 flex flex-col rounded-2xl w-3/5 space-y-2">
+          <div className="flex flex-col md:flex-row space-x-4 w-full items-center md:items-start">
+            <div className="bg-[#FAFAFA] hover:bg-[#3461FF] text-black hover:text-white transition duration-300 ease-in-out p-8 flex flex-col rounded-2xl w-4/5 space-y-2">
               <div className="flex space-x-4">
                 <div>
                   <img
@@ -270,7 +270,7 @@ const Home: NextPage = () => {
                 </p>
               </div>
             </div>
-            <div className="bg-[#FAFAFA] hover:bg-[#3461FF] text-black hover:text-white transition duration-300 ease-in-out p-8 flex flex-col rounded-2xl w-3/5 space-y-2">
+            <div className="bg-[#FAFAFA] hover:bg-[#3461FF] text-black hover:text-white transition duration-300 ease-in-out p-8 flex flex-col rounded-2xl w-4/5 space-y-2">
               <div className="flex space-x-4">
                 <div>
                   <img
@@ -293,7 +293,7 @@ const Home: NextPage = () => {
                 </p>
               </div>
             </div>
-            <div className="bg-[#FAFAFA] hover:bg-[#3461FF] text-black hover:text-white transition duration-300 ease-in-out p-8 flex flex-col rounded-2xl w-3/5 space-y-2">
+            <div className="bg-[#FAFAFA] hover:bg-[#3461FF] text-black hover:text-white transition duration-300 ease-in-out p-8 flex flex-col rounded-2xl w-4/5 space-y-2">
               <div className="flex space-x-4">
                 <div>
                   <img
@@ -318,72 +318,14 @@ const Home: NextPage = () => {
           </div>
         </div>
       </section>
-      <section className="h-screen space-y-12 my-24">
-        <div className="w-screen h-1/2 flex justify-center">
-          <div className="bg-[#232038] bg-[url('/start-your-journey/background.png')] w-3/4 rounded-2xl p-8 flex flex-col md:flex-row space-y-8 md:space-y-0">
-            <div className="w-3/5 p-8 space-y-12">
-              <h1 className="text-5xl">Start Your Journey With Us Now</h1>
-              <button className="bg-[#3461FF] rounded-full py-4 px-8 text-xl">
-                Start Now
-              </button>
-            </div>
-            <div className="w-2/5 flex justify-center">
-              <div className="bg-[#E0FF22] aspect-square flex justify-center items-center rounded-full">
-                <img
-                  src="/start-your-journey/Vector-1.png"
-                  alt=""
-                  className="w-1/4"
-                />
-                <img
-                  src="/start-your-journey/Vector.png"
-                  alt=""
-                  className="w-1/2"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-col space-y-8 md:space-y-0 md:space-x-0 md:flex-row px-8 md:py-12 md:px-24 h-1/2">
-          <div className="md:w-3/5 md:pr-24">
-            <div className="border-t text-black py-8">
-              <h1>How do i sign up for the project</h1>
-            </div>
-            <div className="border-b border-t text-black py-8">
-              <h1>What thing that i should prepare before starting</h1>
-            </div>
-            <div className="border-b text-black py-8">
-              <h1>Does my company need help for marketing advices</h1>
-            </div>
-          </div>
-          <div className="md:w-2/5 space-y-6 py-4">
-            <h1 className="text-black text-4xl font-bold">
-              How We Can Help You?
-            </h1>
-            <p className="text-slate-400">
-              Follow our newsletter. We will regularly update our latest project
-              and availability
-            </p>
-            <div className="space-x-2">
-              <input
-                type="text"
-                className="bg-[#FAFAFA] text-black form-input rounded-xl pl-4 h-8"
-                placeholder="Enter your email"
-              />
-              <button className="text-white bg-[#3461FF] font-medium rounded-full h-8 px-2">
-                Lets talk
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
       <section className="space-y-12">
         <div className="h-1/2 flex justify-center px-4 md:px-24">
           <div className="bg-[#232038] bg-[url('/start-your-journey/background.png')] bg-cover w-full rounded-2xl lg:p-8 flex flex-row">
             <div className="w-3/5 p-8 space-y-4 md:space-y-12 flex flex-col justify-center md:flex-none">
-              <h1 className="text-lg md:text-3xl lg:text-5xl">
+              <h1 className="text-2xl md:text-3xl lg:text-5xl">
                 Start Your Journey With Us Now
               </h1>
-              <button className="bg-[#3461FF] rounded-full lg:py-4 lg:px-8 py-2 px-4 lg:text-xl text-xs w-2/3 md:w-1/3">
+              <button className="bg-[#3461FF] rounded-full lg:py-4 lg:px-8 py-2 px-4 lg:text-xl text-xs w-1/3">
                 Start Now
               </button>
             </div>
