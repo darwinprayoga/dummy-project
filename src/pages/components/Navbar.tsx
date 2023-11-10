@@ -1,35 +1,34 @@
 import {
-  GoogleAuthProvider,
-  onAuthStateChanged,
-  signInWithPopup,
-  signOut,
+    GoogleAuthProvider,
+    onAuthStateChanged,
+    signInWithPopup,
+    signOut,
 } from "firebase/auth";
 import { useEffect, useState } from "react";
 import { auth } from "../../../firebase";
 import Link from "next/link";
 
 const Navbar = () => {
-  const [user, setUser] = useState<any | null>(false);
+    const [user, setUser] = useState<any | null>(false);
 
-  useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
-      if (user == null) {
-        setUser(null);
-      } else {
-        setUser(user);
-      }
-    });
-  }, [setUser]);
+    useEffect(() => {
+        onAuthStateChanged(auth, (user) => {
+            if (user == null) {
+                setUser(null);
+            } else {
+                setUser(user);
+            }
+        });
+    }, [setUser]);
 
-  function googleSignIn() {
-    const provider = new GoogleAuthProvider();
-    signInWithPopup(auth, provider);
-  }
+    function googleSignIn() {
+        const provider = new GoogleAuthProvider();
+        signInWithPopup(auth, provider);
+    }
 
-  function logOut() {
-    signOut(auth);
-  }
-
+    function logOut() {
+        signOut(auth);
+    }
   return (
     <nav className="bg-white sticky top-0 z-50 flex flex-nowrap items-center justify-between border-b py-4 px-4 xl:px-24 lg:px-18 md:px-12 md:flex-nowrap sm:px-8 sm:flex-nowrap">
       <div>
