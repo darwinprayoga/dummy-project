@@ -76,7 +76,7 @@ const Navbar = () => {
         </div>
       </nav>
       {nav && (
-        <nav className="text-black bg-white text-lg gap-4 font-medium flex flex-col w-full py-2 border shadow-xl md:hidden px-4">
+        <nav className="text-black bg-white text-lg gap-4 font-medium flex flex-col w-full py-2 border shadow-xl md:hidden px-4 rounded-xl">
           <Link href="/#how-it-works" className="w-full justify-center flex">How it works</Link>
           <Link href="/#our-work" className="w-full justify-center flex">Our Work</Link>
           <Link href="/listing" className="w-full justify-center flex">Listing</Link>

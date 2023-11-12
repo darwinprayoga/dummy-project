@@ -233,7 +233,7 @@ const Home: NextPage = () => {
               <h1 className="text-black text-3xl sm:text-5xl font-semibold">
                 Meet Our Team
               </h1>
-              <p className="text-slate-400">
+              <p className="text-slate-400 md:w-2/3">
                 Discover the brilliance behind Embrace. Our team blends
                 innovation and artistry to craft digital wonders that captivate
               </p>
@@ -369,10 +369,10 @@ const Home: NextPage = () => {
             <div className="gap-2 w-full py-4">
               <input
                 type="text"
-                className="bg-[#FAFAFA] text-black form-input rounded-3xl pl-4 h-8 w-3/5 sm:w-2/5 md:w-2/3"
+                className="bg-[#FAFAFA] text-black form-input rounded-3xl pl-4 h-8 md:h-12 w-3/5 sm:w-2/5 md:w-2/3"
                 placeholder="Enter your email"
               />
-              <button className="text-white bg-[#3461FF] font-medium rounded-full h-8 w-2/5 sm:w-1/5 md:w-1/3">
+              <button className="text-white bg-[#3461FF] font-medium rounded-full h-8 md:h-12 w-2/5 sm:w-1/5 md:w-1/3">
                 Lets talk
               </button>
             </div>
