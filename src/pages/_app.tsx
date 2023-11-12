@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className={`bg-white ${inter.className}`}>
+    <div className={`bg-white sticky top-0 z-50 ${inter.className}`}>
       <Navbar />
       <Component {...pageProps} />
     </div>

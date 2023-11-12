@@ -42,7 +42,7 @@ const Home: NextPage = () => {
         </div>
       </section>
       <section className="flex flex-col md:flex-row justify-center md:items-start py-8 px-8 lg:py-24 lg:px-24 md:py-12 md:px-12">
-        <div className="md:w-1/2 grid gap-4 grid-cols-2 grid-rows-2 flex-col items-center p-4">
+        <div className="md:w-1/2 grid gap-4 grid-cols-2 grid-rows-2 flex-col items-center py-4">
           <div className="text-black">
             <h1 className="font-bold text-3xl lg:text-5xl md:text-4xl">245%</h1>
             <p className="text-slate-400 text-xs lg:text-md md:text-sm">
@@ -70,7 +70,7 @@ const Home: NextPage = () => {
             </p>
           </div>
         </div>
-        <div className="p-4 md:w-1/2 space-y-4">
+        <div className="py-4 md:w-1/2 space-y-4">
           <h1 className="text-black font-medium text-3xl lg:text-5xl md:text-4xl">
             Commitments
           </h1>
@@ -153,11 +153,11 @@ const Home: NextPage = () => {
           </div>
         </div>
       </section>
-      <section id="our-work" className="space-y-12 py-12 px-4 md:h-1/2">
-        <div className="px-12 space-y-12">
+      <section id="our-work" className="space-y-12 py-12 md:h-1/2">
+        <div className="px-4 space-y-12">
           <div className="flex flex-col items-center space-y-2 lg:space-y-2">
-            <h1 className="text-black font-medium text-5xl">Our Work</h1>
-            <p className="text-black text-sm">A glimpse of our portofolio</p>
+            <h1 className="text-black font-medium md:text-5xl text-4xl">Our Work</h1>
+            <p className="text-black text-xs">A glimpse of our portofolio</p>
           </div>
           <div className="grid-rows-3 gap-2 flex flex-col md:flex-row items-center justify-between px-8">
             <div className="space-y-2">
@@ -182,19 +182,19 @@ const Home: NextPage = () => {
               See more
             </button>
           </div>
-          <div className="flex justify-center h-1/2 py-4 md:px-24 ">
-            <div className="bg-[#3561FF] bg-[url('/elevate-your-brand/Background.png')] w-full rounded-2xl px-12 py-8 flex flex-row space-y-8 md:space-y-0">
-              <div className="w-1/2 py-4">
-                <h1 className="text-3xl font-medium w-1/2">
+          <div className="flex justify-center items-center h-1/2 py-4 md:px-8">
+            <div className="bg-[#3561FF] bg-[url('/elevate-your-brand/Background.png')] w-full rounded-2xl px-8 py-8 flex flex-row md:space-y-0">
+              <div className="w-1/2">
+                <h1 className="flex items-center text-xl sm:text-3xl md:text-4xl font-medium w-1/2 h-full">
                   Elevate Your Brand Today!
                 </h1>
               </div>
-              <div className="w-1/2 flex flex-col space-y-4 md:space-y-10 md:py-6 py-2">
-                <p className="text-xs md:text-xl">
+              <div className="w-1/2 flex flex-col space-y-4 md:space-y-10 md:py-6">
+                <p className="text-xs md:text-lg lg:text-xl">
                   Ready to transform your digital dresence? Let's create magic
                   together! book our services now!
                 </p>
-                <button className="bg-white text-black rounded-3xl p-2 md:p-4 w-1/2 lg:w-1/3">
+                <button className="bg-white text-xs text-black rounded-3xl py-2 md:p-4 w-3/4 sm:w-1/3">
                   Book Call
                 </button>
               </div>
@@ -202,10 +202,10 @@ const Home: NextPage = () => {
           </div>
         </div>
       </section>
-      <section className="flex flex-col px-12 py-12 font-sans space-y-12">
-        <div className="flex flex-col justify-center">
-          <div className="flex flex-col">
-            <div className="flex">
+      <section className="flex flex-col px-8 md:px-12 py-12 font-sans space-y-12">
+        <div className="flex flex-col md:flex-row w-full justify-center md:space-x-4">
+          <div className="flex flex-col gap-2 md:w-1/2">
+            <div className="flex gap-2">
               <div className="w-1/3">
                 <img width={"100%"} src="/meet-our-team/Rectangle 184.png" />
               </div>
@@ -216,7 +216,7 @@ const Home: NextPage = () => {
                 <img width={"100%"} src="/meet-our-team/Rectangle 181.png" />
               </div>
             </div>
-            <div className="flex">
+            <div className="flex gap-2">
               <div className="w-1/3">
                 <img width={"100%"} src="/meet-our-team/Rectangle 182.png" />
               </div>
@@ -228,17 +228,17 @@ const Home: NextPage = () => {
               </div>
             </div>
           </div>
-          <div className="w-2/5 space-y-24">
+          <div className="w-full sm:w-2/5 md:w-1/2 space-y-8 md:space-y-12 sm:space-y-24 py-4 sm:py-0">
             <div className="space-y-4">
-              <h1 className="text-black text-5xl font-semibold">
+              <h1 className="text-black text-3xl sm:text-5xl font-semibold">
                 Meet Our Team
               </h1>
-              <p className="text-slate-400">
+              <p className="text-slate-400 md:w-2/3">
                 Discover the brilliance behind Embrace. Our team blends
                 innovation and artistry to craft digital wonders that captivate
               </p>
             </div>
-            <div className="items-end">
+            <div>
               <button className="bg-[#3461FF] rounded-full py-2 px-4">
                 Learn more
               </button>
@@ -246,9 +246,9 @@ const Home: NextPage = () => {
           </div>
         </div>
         <div className="flex flex-col space-y-4 items-center">
-          <div>
+          <div className="w-full">
             <div>
-              <h1 className="text-black text-3xl font-semibold">
+              <h1 className="text-black text-2xl sm:text-3xl font-semibold sm:text-start text-center">
                 What Our Client Said About Us
               </h1>
             </div>
@@ -257,8 +257,8 @@ const Home: NextPage = () => {
               <button></button>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row space-x-4 w-full items-center md:items-start">
-            <div className="bg-[#FAFAFA] hover:bg-[#3461FF] text-black hover:text-white transition duration-300 ease-in-out p-8 flex flex-col rounded-2xl w-4/5 space-y-2">
+          <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 w-full items-start">
+            <div className="bg-[#FAFAFA] hover:bg-[#3461FF] text-black hover:text-white transition duration-300 ease-in-out p-8 flex flex-col rounded-2xl sm:w-4/5 md:w-1/3 space-y-2">
               <div className="flex space-x-4">
                 <div>
                   <img
@@ -270,7 +270,7 @@ const Home: NextPage = () => {
                 <div>
                   <h1 className="font-bold text-xl">Amelia Joseph</h1>
                   <h2 className="font-medium">Chief Manager</h2>
-                </div>
+                </div>  
               </div>
               <div>
                 <p>
@@ -280,7 +280,7 @@ const Home: NextPage = () => {
                 </p>
               </div>
             </div>
-            <div className="bg-[#FAFAFA] hover:bg-[#3461FF] text-black hover:text-white transition duration-300 ease-in-out p-8 flex flex-col rounded-2xl w-4/5 space-y-2">
+            <div className="bg-[#FAFAFA] hover:bg-[#3461FF] text-black hover:text-white transition duration-300 ease-in-out p-8 flex flex-col rounded-2xl sm:w-4/5 md:w-1/3 space-y-2">
               <div className="flex space-x-4">
                 <div>
                   <img
@@ -303,7 +303,7 @@ const Home: NextPage = () => {
                 </p>
               </div>
             </div>
-            <div className="bg-[#FAFAFA] hover:bg-[#3461FF] text-black hover:text-white transition duration-300 ease-in-out p-8 flex flex-col rounded-2xl w-4/5 space-y-2">
+            <div className="bg-[#FAFAFA] hover:bg-[#3461FF] text-black hover:text-white transition duration-300 ease-in-out p-8 flex flex-col rounded-2xl sm:w-4/5 md:w-1/3 space-y-2">
               <div className="flex space-x-4">
                 <div>
                   <img
@@ -331,15 +331,15 @@ const Home: NextPage = () => {
       <section className="space-y-12">
         <div className="h-1/2 flex justify-center px-4 md:px-24">
           <div className="bg-[#232038] bg-[url('/start-your-journey/background.png')] bg-cover w-full rounded-2xl lg:p-8 flex flex-row">
-            <div className="w-3/5 p-8 space-y-4 md:space-y-12 flex flex-col justify-center md:flex-none">
-              <h1 className="text-2xl md:text-3xl lg:text-5xl">
+            <div className="w-3/5 p-4 sm:p-8 space-y-4 md:space-y-12 flex flex-col justify-center md:flex-none">
+              <h1 className="text-lg sm:text-2xl md:text-3xl lg:text-5xl">
                 Start Your Journey With Us Now
               </h1>
-              <button className="bg-[#3461FF] rounded-full lg:py-4 lg:px-8 py-2 px-4 lg:text-xl text-xs w-1/3">
+              <button className="bg-[#3461FF] rounded-full lg:py-4 lg:px-8 py-2 px-4 lg:text-xl text-xs w-2/3 sm:w-1/3">
                 Start Now
               </button>
             </div>
-            <div className="w-2/5 flex justify-center p-6 md:p-0">
+            <div className="w-2/5 flex flex-col items-center justify-center p-4 sm:p-6 md:p-4">
               <div>
                 <img src="/start-your-journey/Group 2192.png" />
               </div>
@@ -366,13 +366,13 @@ const Home: NextPage = () => {
               Follow our newsletter. We will regularly update our latest project
               and availability
             </p>
-            <div className="md:space-x-2 w-full py-4">
+            <div className="gap-2 w-full py-4">
               <input
                 type="text"
-                className="bg-[#FAFAFA] text-black form-input rounded-3xl pl-4 h-12 w-2/4 md:w-2/3"
+                className="bg-[#FAFAFA] text-black form-input rounded-3xl pl-4 h-8 md:h-12 w-3/5 sm:w-2/5 md:w-2/3"
                 placeholder="Enter your email"
               />
-              <button className="text-white bg-[#3461FF] font-medium rounded-full h-12 w-1/4">
+              <button className="text-white bg-[#3461FF] font-medium rounded-full h-8 md:h-12 w-2/5 sm:w-1/5 md:w-1/3">
                 Lets talk
               </button>
             </div>
@@ -412,12 +412,12 @@ const Home: NextPage = () => {
             </div>
           </div>
           <div className="items-center flex">
-            <button className="bg-[#3461FF] rounded-3xl p-3 text-sm w-36 hover:scale-105">
+            <button className="bg-[#3461FF] rounded-3xl p-2 sm:p-3 text-sm sm:w-36 hover:scale-105">
               Contact Us
             </button>
           </div>
         </div>
-        <div className="text-black w-full md:w-1/2 grid grid-rows-3 grid-cols-3 gap-1 font-semibold space-x-12">
+        <div className="text-black w-full md:w-1/2 flex font-semibold gap-4">
           <div className="space-y-4">
             <ul className="hover:scale-105">
               <a href="">Work With Us</a>
