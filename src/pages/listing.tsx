@@ -101,8 +101,8 @@ export default function Home() {
   return (
     <main className="bg-white ">
       <div className="min-h-screen z-10 w-full max-w-5xl items-center justify-between text-sm ">
-        <div className="flex items-center w-screen py-8 px-12 xl:px-24 lg:px-18 md:px-12 md:py-12 sm:px-8 sm:py-8">
-          <div className="w-1/2 flex flex-col justify-center space-y-4 xl:space-y-8 xl:py-24 lg:space-y-8 lg:py-24 md:space-y-4 sm:space-y-4">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-0 items-center w-screen py-8 px-12 xl:px-24 lg:px-18 md:px-12 md:py-12 sm:px-8 sm:py-8">
+          <div className="md:w-1/2 flex flex-col justify-center space-y-4 xl:space-y-8 xl:py-24 lg:space-y-8 lg:py-24 md:space-y-4 sm:space-y-4">
             <div className="text-black font-bold text-5xl xl:w-2/3 xl:text-7xl lg:w-2/3 lg:text-6xl md:w-4/5 md:text-5xl sm:w-4/5 sm:text-4xl">
               Our Expense Tracker
             </div>
@@ -111,7 +111,7 @@ export default function Home() {
               your finances like never before.
             </p>
             <div className="flex flex-wrap space-x-2">
-              <button className="text-white bg-[#3461FF] font-medium rounded-full text-xs px-2 lg:h-12 lg:px-6 md:h-8 md:text-sm md:px-4 sm:h-6">
+              <button className="text-white bg-[#3461FF] font-medium rounded-full text-xs px-6 py-4 lg:h-12 lg:px-6 md:h-8 md:text-sm md:px-4 sm:h-6">
                 Lets Track
               </button>
             </div>

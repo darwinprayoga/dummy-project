@@ -7,7 +7,7 @@ import {
 import { useEffect, useState } from "react";
 import { auth } from "../../../firebase";
 import Link from "next/link";
-import Share from "../api/share"
+import Share from "./share";
 const Navbar = () => {
   const [user, setUser] = useState<any | null>(false);
   const [nav, setNav] = useState(false);
@@ -73,10 +73,18 @@ const Navbar = () => {
       </nav>
       {nav && (
         <nav className="text-black bg-white text-lg gap-4 font-medium flex flex-col w-full py-2 border shadow-xl md:hidden px-4 rounded-xl">
-          <Link href="/#how-it-works" className="w-full justify-center flex">How it works</Link>
-          <Link href="/#our-work" className="w-full justify-center flex">Our Work</Link>
-          <Link href="/listing" className="w-full justify-center flex">Listing</Link>
-          <Link href="/" className="w-full justify-center flex">About Us</Link>
+          <Link href="/#how-it-works" className="w-full justify-center flex">
+            How it works
+          </Link>
+          <Link href="/#our-work" className="w-full justify-center flex">
+            Our Work
+          </Link>
+          <Link href="/listing" className="w-full justify-center flex">
+            Listing
+          </Link>
+          <Link href="/" className="w-full justify-center flex">
+            About Us
+          </Link>
           <button className="text-white bg-[#3461FF] rounded-xl p-2 xl:py-2 xl:px-3 xl:text-lg lg:text-xs lg:p-2 md:p-1 md:text-xs md:rounded-1 md:mx-0 sm:text-xs">
             Book A Call
           </button>

@@ -1,7 +1,7 @@
 export default function Share() {
   async function onShare() {
     const blob = await fetch(
-      `/api/capture?url=http://localhost:3000/&width=1600&height=1200&disableAnimations=true`
+      `/api/capture?url=http://localhost:3000/&width=1600&height=1200&disableAnimations=true`,
     ).then((res) => res.blob());
 
     // Panggil fungsi untuk mengunduh file
@@ -25,9 +25,9 @@ export default function Share() {
   // Fungsi untuk mengunduh file
   function downloadFile(blob: Blob) {
     const url = window.URL.createObjectURL(blob);
-    const a = document.createElement('a');
+    const a = document.createElement("a");
     a.href = url;
-    a.download = 'screenshot.png';
+    a.download = "screenshot.png";
 
     // Simulasikan klik pada elemen anchor untuk mengunduh file
     a.click();

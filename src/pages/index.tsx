@@ -156,7 +156,9 @@ const Home: NextPage = () => {
       <section id="our-work" className="space-y-12 py-12 md:h-1/2">
         <div className="px-4 space-y-12">
           <div className="flex flex-col items-center space-y-2 lg:space-y-2">
-            <h1 className="text-black font-medium md:text-5xl text-4xl">Our Work</h1>
+            <h1 className="text-black font-medium md:text-5xl text-4xl">
+              Our Work
+            </h1>
             <p className="text-black text-xs">A glimpse of our portofolio</p>
           </div>
           <div className="grid-rows-3 gap-2 flex flex-col md:flex-row items-center justify-between px-8">
@@ -270,7 +272,7 @@ const Home: NextPage = () => {
                 <div>
                   <h1 className="font-bold text-xl">Amelia Joseph</h1>
                   <h2 className="font-medium">Chief Manager</h2>
-                </div>  
+                </div>
               </div>
               <div>
                 <p>
