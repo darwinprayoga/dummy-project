@@ -7,7 +7,7 @@ import {
 import { useEffect, useState } from "react";
 import { auth } from "../../../firebase";
 import Link from "next/link";
-
+import Share from "../api/share"
 const Navbar = () => {
   const [user, setUser] = useState<any | null>(false);
   const [nav, setNav] = useState(false);
@@ -53,21 +53,17 @@ const Navbar = () => {
           <button className="text-black rounded-xl p-2 xl:py-2 xl:px-3 xl:text-lg lg:text-xs lg:p-2 md:p-1 md:text-xs md:rounded-1 md:mx-0 sm:text-xs">
             Book A Call
           </button>
-          <Link href="/api/capture?url=http://localhost:3000">
-            <button className="text-white bg-[#3461FF] rounded-xl p-2 xl:py-2 xl:px-3 xl:text-lg lg:text-xs lg:p-2 md:p-1 md:text-xs md:rounded-1 md:mx-0 sm:text-xs">
-              Capture Screenshot
-            </button>
-          </Link>
+          <Share />
           {!user ? (
             <button
-              className="bg-[#3461FF] rounded-xl p-2 xl:py-2 xl:px-3 xl:text-lg lg:text-xs lg:p-2 md:p-1 md:text-xs md:rounded-1 md:mx-0 sm:text-xs"
+              className="text-white bg-[#3461FF] rounded-xl p-2 xl:py-2 xl:px-3 xl:text-lg lg:text-xs lg:p-2 md:p-1 md:text-xs md:rounded-1 md:mx-0 sm:text-xs"
               onClick={googleSignIn}
             >
               Login
             </button>
           ) : (
             <button
-              className="bg-[#3461FF] rounded-xl p-2 xl:py-2 xl:px-3 xl:text-lg lg:text-xs lg:p-2 md:p-1 md:text-xs md:rounded-1 md:mx-0 sm:text-xs"
+              className="text-white bg-[#3461FF] rounded-xl p-2 xl:py-2 xl:px-3 xl:text-lg lg:text-xs lg:p-2 md:p-1 md:text-xs md:rounded-1 md:mx-0 sm:text-xs"
               onClick={logOut}
             >
               Logout
