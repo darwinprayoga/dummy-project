@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import { ArrowRight } from "./components/icons";
 
 const Home: NextPage = () => {
   return (
@@ -49,7 +50,7 @@ const Home: NextPage = () => {
               Most revenues for the brand
             </p>
           </div>
-          <div className="text-black">
+          <div className="text-black block top-0">
             <h1 className="font-bold text-3xl lg:text-5xl md:text-4xl">50+</h1>
             <p className="text-slate-400 text-xs lg:text-md md:text-sm">
               Brand trust us
@@ -78,9 +79,10 @@ const Home: NextPage = () => {
             We are committed to working with you collaboratively to understand
             your goals and create a strategy that will achieve them.
           </p>
-          <p className="text-blue-500 font-bold text-sm md:text-lg">
+          <a href="/" className="text-blue-500 font-bold text-sm md:text-lg flex items-center gap-2">
             Learn more
-          </p>
+            <ArrowRight className="text-[#3461FF] w-6 h-6"/>
+          </a>
         </div>
       </section>
       <section
@@ -196,7 +198,7 @@ const Home: NextPage = () => {
                   Ready to transform your digital dresence? Let's create magic
                   together! book our services now!
                 </p>
-                <button className="bg-white text-xs text-black rounded-3xl py-2 md:p-4 w-3/4 sm:w-1/3">
+                <button className="bg-white text-xs md:text-lg text-black rounded-3xl py-2 md:p-2 w-3/4 sm:w-1/3">
                   Book Call
                 </button>
               </div>
@@ -230,7 +232,7 @@ const Home: NextPage = () => {
               </div>
             </div>
           </div>
-          <div className="w-full sm:w-2/5 md:w-1/2 space-y-8 md:space-y-12 sm:space-y-24 py-4 sm:py-0">
+          <div className="w-full sm:w-2/5 md:w-1/2 space-y-8 md:space-y-12 sm:space-y-24 py-4 sm:py-0 h-full">
             <div className="space-y-4">
               <h1 className="text-black text-3xl sm:text-5xl font-semibold">
                 Meet Our Team
@@ -254,12 +256,12 @@ const Home: NextPage = () => {
                 What Our Client Said About Us
               </h1>
             </div>
-            <div className="space-x-2">
+            <div className="space-x-2 hidden md:flex">
               <button></button>
               <button></button>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 w-full items-start">
+          <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 w-full">
             <div className="bg-[#FAFAFA] hover:bg-[#3461FF] text-black hover:text-white transition duration-300 ease-in-out p-8 flex flex-col rounded-2xl sm:w-4/5 md:w-1/3 space-y-2">
               <div className="flex space-x-4">
                 <div>
@@ -381,9 +383,10 @@ const Home: NextPage = () => {
             <div>
               <a
                 href=""
-                className="text-[#3461FF] font-semibold underline decoration-[#3461FF]"
+                className="text-[#3461FF] font-semibold underline decoration-[#3461FF] flex items-center gap-2"
               >
                 More FAQ
+                <ArrowRight className="text-[#3461FF] w-6 h-6"/>
               </a>
             </div>
           </div>
@@ -419,7 +422,7 @@ const Home: NextPage = () => {
             </button>
           </div>
         </div>
-        <div className="text-black w-full md:w-1/2 flex font-semibold gap-4">
+        <div className="text-black w-full md:w-1/2 flex font-semibold gap-4 justify-between">
           <div className="space-y-4">
             <ul className="hover:scale-105">
               <a href="">Work With Us</a>

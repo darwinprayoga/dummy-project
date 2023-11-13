@@ -72,7 +72,8 @@ const Navbar = () => {
         </div>
       </nav>
       {nav && (
-        <nav className="text-black bg-white text-lg gap-4 font-medium flex flex-col w-full py-2 border shadow-xl md:hidden px-4 rounded-xl">
+        <div className="relative">
+        <nav className="text-black absolute bg-white text-lg gap-4 font-medium flex flex-col w-full py-2 border shadow-xl md:hidden px-4 rounded-xl">
           <Link href="/#how-it-works" className="w-full justify-center flex">
             How it works
           </Link>
@@ -104,6 +105,7 @@ const Navbar = () => {
             </button>
           )}
         </nav>
+        </div>
       )}
     </main>
   );
