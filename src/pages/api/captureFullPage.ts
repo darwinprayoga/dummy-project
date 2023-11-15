@@ -1,3 +1,5 @@
+//ini halaman sementara untuk kode capture full view page
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import puppeteer from "puppeteer";
 
@@ -6,7 +8,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const { url } = req.query;
-  
+
   if (!url) {
     return res.status(400).json({ error: "URL parameter is required" });
   }
@@ -17,14 +19,20 @@ export default async function handler(
 
   try {
     browser = await puppeteer.launch({
-      headless: "new", 
+      headless: true, // Change to true for production
     });
 
     const page = await browser.newPage();
-    await page.setViewport({ width: 549, height: 978 });
-    await page.goto(urlToCapture);
+    await page.setViewport({ width: 1200, height: 800 }); // Adjust as needed
 
-    const screenshotBuffer = await page.screenshot({ type: "png" });
+    // Navigate to the page
+    await page.goto(urlToCapture, { waitUntil: "domcontentloaded" });
+
+    // Wait for lazy-loaded content or any other asynchronous tasks
+    await page.waitForTimeout(3000); // Adjust as needed
+
+    // Capture a full-page screenshot
+    const screenshotBuffer = await page.screenshot({ type: "png", fullPage: true });
 
     res.setHeader("Content-Type", "image/png");
     res.setHeader("Content-Disposition", `attachment; filename=screenshot.png`);

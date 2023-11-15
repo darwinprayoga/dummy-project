@@ -7,7 +7,9 @@ import {
 import { useEffect, useState } from "react";
 import { auth } from "../../../firebase";
 import Link from "next/link";
-import Share from "./share";
+import Share from "../components/Share";
+
+
 const Navbar = () => {
   const [user, setUser] = useState<any | null>(false);
   const [nav, setNav] = useState(false);
