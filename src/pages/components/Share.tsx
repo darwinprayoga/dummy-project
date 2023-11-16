@@ -1,25 +1,38 @@
 export default function Share() {
   async function onShare() {
-    const blob = await fetch(
-      `/api/capture?url=http://localhost:3000/&width=1600&height=1200&disableAnimations=true`,
-    ).then((res) => res.blob());
+    const currentUrl = window.location.href;
 
-    // Panggil fungsi untuk mengunduh file
-    downloadFile(blob);
+    try {
+      const blob = await fetch(
+        `/api/capture?url=${encodeURIComponent(currentUrl)}&width=549&height=978&disableAnimations=true`
+      ).then((res) => res.blob());
 
-    const filesArray: File[] = [
-      new File([blob], `screenshot.png`, {
-        type: blob.type,
-      }),
-    ];
+      // Panggil fungsi untuk mengunduh file
+      downloadFile(blob);
 
-    const shareData = {
-      files: filesArray,
-      title: `This is the screenshot`,
-    };
+      const filesArray = [
+        new File([blob], `screenshot.png`, {
+          type: blob.type,
+        }),
+      ];
 
-    // Bagian berikut masih tetap sama
-    navigator.share(shareData as any).catch((e) => Error(e));
+      const shareData = {
+        files: filesArray,
+        title: `This is the screenshot`,
+      };
+
+      // Check if navigator.share is supported
+      if (navigator.share) {
+        // Share the file using navigator.share
+        await navigator.share(shareData);
+      } else {
+        // Provide an alternative if sharing is not supported
+        alert('Sharing is not supported on your device. You can download the screenshot instead.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      // Handle other errors here
+    }
   }
 
   // Fungsi untuk mengunduh file
@@ -28,10 +41,10 @@ export default function Share() {
     const a = document.createElement("a");
     a.href = url;
     a.download = "screenshot.png";
-
+  
     // Simulasikan klik pada elemen anchor untuk mengunduh file
     a.click();
-
+  
     // Hapus elemen anchor setelah proses unduhan
     window.URL.revokeObjectURL(url);
   }
