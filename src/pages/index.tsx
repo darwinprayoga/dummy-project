@@ -1,16 +1,26 @@
 import type { NextPage } from "next";
-import { ArrowRight } from "./components/icons";
+import { ArrowRight } from "./components/Icons";
+import Switcher, { Tab, theme } from './components/Switcher';
+import React, { useState } from 'react';
+import { darkTheme } from './components/plugins/sync';
 
 const Home: NextPage = () => {
+  const [colorScheme, setColorScheme] = useState(darkTheme)
+  const toggle = () => theme(colorScheme, setColorScheme)
+
+  function ColorScheme() {
+    return <Switcher default={colorScheme} onChange={toggle} />
+  }
   return (
     <main>
       <header>
-        <div className="flex flex-col-reverse items-center md:items-start md:flex-row justify-between py-8 px-8 xl:px-24 lg:px-18 md:px-12 md:py-12 sm:px-8 sm:py-8">
+        <ColorScheme/>
+        <div className="bg-white dark:bg-[#1f1f1f]  flex flex-col-reverse items-center md:items-start md:flex-row justify-between py-8 px-8 xl:px-24 lg:px-18 md:px-12 md:py-12 sm:px-8 sm:py-8">
           <div className="md:w-1/2 flex flex-col py-8 justify-center space-y-4 xl:space-y-8 xl:py-24 lg:space-y-8 lg:py-24 md:space-y-4 sm:space-y-4">
-            <div className="w-3/4 text-black font-bold text-5xl xl:w-2/3 xl:text-7xl lg:w-2/3 lg:text-6xl md:w-4/5 md:text-5xl sm:w-4/5 sm:text-4xl">
+            <div className="w-3/4 text-black dark:text-white font-bold text-5xl xl:w-2/3 xl:text-7xl lg:w-2/3 lg:text-6xl md:w-4/5 md:text-5xl sm:w-4/5 sm:text-4xl">
               We Take Care of Your Brand
             </div>
-            <p className="text-black text-xs lg:text-lg md:text-sm sm:text-sm sm:w-3/4">
+            <p className="text-black dark:text-white text-xs lg:text-lg md:text-sm sm:text-sm sm:w-3/4">
               We care about our work and we care about our clients.
             </p>
             <div className="flex flex-wrap space-x-2">
@@ -29,7 +39,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </header>
-      <section className="bg-[#FAFAFA] flex flex-col items-center px-8 space-y-4 lg:px-24 md:px-12">
+      <section className="bg-[#FAFAFA] dark:bg-[#0f0f0f] flex flex-col items-center px-8 space-y-4 lg:px-24 md:px-12">
         <h1 className="text-black font-medium pt-8 text-2xl">
           Companies We Work With
         </h1>
@@ -392,7 +402,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </section>
-      <section className="bg-[#FAFAFA] flex flex-col md:flex-row justify-between px-8 xl:px-24 py-12 md:px-12 md:py-8 space-y-8 md:space-y-0">
+      <section className="bg-[#FAFAFA] dark:bg-[#0f0f0f] flex flex-col md:flex-row justify-between px-8 xl:px-24 py-12 md:px-12 md:py-8 space-y-8 md:space-y-0">
         <div className="md:w-1/2 md:space-y-8 flex justify-between md:flex-col">
           <div className="space-y-8">
             <img src="/embrace.svg" alt="logo embrace" />
