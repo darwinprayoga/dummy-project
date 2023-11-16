@@ -1,6 +1,8 @@
 import { setCookie } from 'cookies-next';
 import { useLayoutEffect, useState } from 'react';
 
+
+
 export default function Switcher(props: { onChange(): void, default: boolean }) {
 
     const off = `flex shadow-inner drop-shadow-sm justify-start items-center w-[51px] h-[31px] rounded-full bg-gray-600 dark:bg-gray-trans`
@@ -29,6 +31,8 @@ export default function Switcher(props: { onChange(): void, default: boolean }) 
     )
 }
 
+
+
 export function theme(state: boolean, setState: any) {
     if (state) {
         setState(!state)
@@ -40,6 +44,8 @@ export function theme(state: boolean, setState: any) {
         document.documentElement.classList.add('dark')
     }
 }
+
+
 
 export function Tab(props: { onChange(): void, default?: boolean, on: string, off: string }) {
 

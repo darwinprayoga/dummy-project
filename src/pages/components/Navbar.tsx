@@ -11,13 +11,6 @@ import Share from "./Share";
 import Switcher, { Tab, theme } from './Switcher';
 import { darkTheme } from './plugins/sync';
 
-const [colorScheme, setColorScheme] = useState(darkTheme)
-  const toggle = () => theme(colorScheme, setColorScheme)
-
-  function ColorScheme() {
-    return <Switcher default={colorScheme} onChange={toggle} />
-  }
-
 const Navbar = () => {
   const [user, setUser] = useState<any | null>(false);
   const [nav, setNav] = useState(false);
@@ -63,7 +56,6 @@ const Navbar = () => {
           <button className="text-black dark:text-white rounded-xl p-2 xl:py-2 xl:px-3 xl:text-lg lg:text-xs lg:p-2 md:p-1 md:text-xs md:rounded-1 md:mx-0 sm:text-xs">
             Book A Call
           </button>
-          <ColorScheme/>
           <Share />
           {!user ? (
             <button
