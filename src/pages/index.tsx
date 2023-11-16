@@ -1,20 +1,20 @@
 import type { NextPage } from "next";
-import { ArrowRight } from "./components/Icons";
-import Switcher, { Tab, theme } from './components/Switcher';
-import React, { useState } from 'react';
-import { darkTheme } from './components/plugins/sync';
+import Switcher, { Tab, theme } from "./components/Switcher";
+import React, { useState } from "react";
+import { darkTheme } from "./components/plugins/sync";
+import { ArrowRight } from "./components/icons";
 
 const Home: NextPage = () => {
-  const [colorScheme, setColorScheme] = useState(darkTheme)
-  const toggle = () => theme(colorScheme, setColorScheme)
+  const [colorScheme, setColorScheme] = useState(darkTheme);
+  const toggle = () => theme(colorScheme, setColorScheme);
 
   function ColorScheme() {
-    return <Switcher default={colorScheme} onChange={toggle} />
+    return <Switcher default={colorScheme} onChange={toggle} />;
   }
   return (
     <main>
       <header>
-        <ColorScheme/>
+        <ColorScheme />
         <div className="bg-white dark:bg-[#1f1f1f]  flex flex-col-reverse items-center md:items-start md:flex-row justify-between py-8 px-8 xl:px-24 lg:px-18 md:px-12 md:py-12 sm:px-8 sm:py-8">
           <div className="md:w-1/2 flex flex-col py-8 justify-center space-y-4 xl:space-y-8 xl:py-24 lg:space-y-8 lg:py-24 md:space-y-4 sm:space-y-4">
             <div className="w-3/4 text-black dark:text-white font-bold text-5xl xl:w-2/3 xl:text-7xl lg:w-2/3 lg:text-6xl md:w-4/5 md:text-5xl sm:w-4/5 sm:text-4xl">
@@ -89,9 +89,12 @@ const Home: NextPage = () => {
             We are committed to working with you collaboratively to understand
             your goals and create a strategy that will achieve them.
           </p>
-          <a href="/" className="text-blue-500 font-bold text-sm md:text-lg flex items-center gap-2">
+          <a
+            href="/"
+            className="text-blue-500 font-bold text-sm md:text-lg flex items-center gap-2"
+          >
             Learn more
-            <ArrowRight className="text-[#3461FF] w-6 h-6"/>
+            <ArrowRight className="text-[#3461FF] w-6 h-6" />
           </a>
         </div>
       </section>
@@ -396,7 +399,7 @@ const Home: NextPage = () => {
                 className="text-[#3461FF] font-semibold underline decoration-[#3461FF] flex items-center gap-2"
               >
                 More FAQ
-                <ArrowRight className="text-[#3461FF] w-6 h-6"/>
+                <ArrowRight className="text-[#3461FF] w-6 h-6" />
               </a>
             </div>
           </div>

@@ -3,10 +3,10 @@ import puppeteer from "puppeteer";
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse,
 ) {
   const { url } = req.query;
-  
+
   if (!url) {
     return res.status(400).json({ error: "URL parameter is required" });
   }
@@ -17,12 +17,15 @@ export default async function handler(
 
   try {
     browser = await puppeteer.launch({
-      headless: "new", 
+      headless: "new",
     });
 
     const page = await browser.newPage();
     await page.setViewport({ width: 549, height: 978 });
     await page.goto(urlToCapture);
+
+    // Wait for the element to be available [hashtag(#) is refer to element ID, dot(.) is refer to element's class]
+    await page.waitForSelector("#items");
 
     const screenshotBuffer = await page.screenshot({ type: "png" });
 

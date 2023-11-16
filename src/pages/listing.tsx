@@ -151,7 +151,11 @@ export default function Home() {
             </form>
             <ul>
               {items.map((item, id) => (
-                <li key={id} className="my-4 w-full flex justify-between">
+                <li
+                  id="items"
+                  key={id}
+                  className="my-4 w-full flex justify-between"
+                >
                   <div className="text-black p-4 w-full flex justify-between rounded-lg col-span-3 border">
                     <span className="capitalize">{item.name}</span>
                     <span>${item.price}</span>
