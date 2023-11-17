@@ -20,7 +20,7 @@ export default function App({ Component, pageProps }: AppProps) {
   }, [theme])
   
   return (
-    <div className={`${inter.className}`}>
+    <div className={`bg-white dark:bg-[#0f0f0f] ${inter.className}`}>
       <Navbar />
       <Component {...pageProps} />
     </div>

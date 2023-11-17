@@ -1,21 +1,12 @@
 import type { NextPage } from "next";
-import Switcher, { Tab, theme } from "./components/Switcher";
-import React, { useState } from "react";
-import { darkTheme } from "./components/plugins/sync";
-import { ArrowRight } from "./components/icons";
+import { ArrowRight } from "./components/Icons";
+import React from 'react';
 
 const Home: NextPage = () => {
-  const [colorScheme, setColorScheme] = useState(darkTheme);
-  const toggle = () => theme(colorScheme, setColorScheme);
-
-  function ColorScheme() {
-    return <Switcher default={colorScheme} onChange={toggle} />;
-  }
   return (
     <main>
       <header>
-        <ColorScheme />
-        <div className="bg-white dark:bg-[#1f1f1f]  flex flex-col-reverse items-center md:items-start md:flex-row justify-between py-8 px-8 xl:px-24 lg:px-18 md:px-12 md:py-12 sm:px-8 sm:py-8">
+        <div className="flex flex-col-reverse items-center md:items-start md:flex-row justify-between py-8 px-8 xl:px-24 lg:px-18 md:px-12 md:py-12 sm:px-8 sm:py-8">
           <div className="md:w-1/2 flex flex-col py-8 justify-center space-y-4 xl:space-y-8 xl:py-24 lg:space-y-8 lg:py-24 md:space-y-4 sm:space-y-4">
             <div className="w-3/4 text-black dark:text-white font-bold text-5xl xl:w-2/3 xl:text-7xl lg:w-2/3 lg:text-6xl md:w-4/5 md:text-5xl sm:w-4/5 sm:text-4xl">
               We Take Care of Your Brand
@@ -26,7 +17,7 @@ const Home: NextPage = () => {
             <div className="flex flex-wrap space-x-2">
               <input
                 type="text"
-                className="bg-[#FAFAFA] text-black form-input w-3/5 h-8 text-xs border pl-2 rounded-xl lg:rounded-3xl lg:w-3/5 lg:h-12 md:h-8 md:text-sm md:w-3/5 sm:h-6 sm:text-sm"
+                className="form-input w-3/5 h-8 text-xs border pl-2 rounded-xl lg:rounded-3xl lg:w-3/5 lg:h-12 md:h-8 md:text-sm md:w-3/5 sm:h-6 sm:text-sm"
                 placeholder="Enter your email"
               />
               <button className="text-white bg-[#3461FF] font-medium rounded-full text-xs px-2 lg:h-12 lg:px-6 md:h-8 md:text-sm md:px-4 sm:h-6">
@@ -39,8 +30,8 @@ const Home: NextPage = () => {
           </div>
         </div>
       </header>
-      <section className="bg-[#FAFAFA] dark:bg-[#0f0f0f] flex flex-col items-center px-8 space-y-4 lg:px-24 md:px-12">
-        <h1 className="text-black font-medium pt-8 text-2xl">
+      <section className="bg-[#FAFAFA] dark:bg-[#252526] flex flex-col items-center px-8 space-y-4 lg:px-24 md:px-12">
+        <h1 className="text-black dark:text-white font-medium pt-8 text-2xl">
           Companies We Work With
         </h1>
         <div className="space-x-4 flex flex-row md:hidden w-full justify-center py-4">
@@ -54,19 +45,19 @@ const Home: NextPage = () => {
       </section>
       <section className="flex flex-col md:flex-row justify-center md:items-start py-8 px-8 lg:py-24 lg:px-24 md:py-12 md:px-12">
         <div className="md:w-1/2 grid gap-4 grid-cols-2 grid-rows-2 flex-col items-center py-4">
-          <div className="text-black">
+          <div className="text-black dark:text-white">
             <h1 className="font-bold text-3xl lg:text-5xl md:text-4xl">245%</h1>
             <p className="text-slate-400 text-xs lg:text-md md:text-sm">
               Most revenues for the brand
             </p>
           </div>
-          <div className="text-black block top-0">
+          <div className="text-black dark:text-white">
             <h1 className="font-bold text-3xl lg:text-5xl md:text-4xl">50+</h1>
             <p className="text-slate-400 text-xs lg:text-md md:text-sm">
               Brand trust us
             </p>
           </div>
-          <div className="text-black">
+          <div className="text-black dark:text-white">
             <h1 className="font-bold text-3xl lg:text-5xl md:text-4xl">
               130K+
             </h1>
@@ -74,7 +65,7 @@ const Home: NextPage = () => {
               Audience reached
             </p>
           </div>
-          <div className="text-black">
+          <div className="text-black dark:text-white">
             <h1 className="font-bold text-3xl lg:text-5xl md:text-4xl">24+</h1>
             <p className="text-slate-400 text-xs lg:text-md md:text-sm">
               Worldwide award
@@ -82,19 +73,16 @@ const Home: NextPage = () => {
           </div>
         </div>
         <div className="py-4 md:w-1/2 space-y-4">
-          <h1 className="text-black font-medium text-3xl lg:text-5xl md:text-4xl">
+          <h1 className="text-black dark:text-white font-medium text-3xl lg:text-5xl md:text-4xl">
             Commitments
           </h1>
-          <p className="text-slate-600 text-xs md:text-sm">
+          <p className="text-slate-600 dark:text-slate-400 text-xs md:text-sm">
             We are committed to working with you collaboratively to understand
             your goals and create a strategy that will achieve them.
           </p>
-          <a
-            href="/"
-            className="text-blue-500 font-bold text-sm md:text-lg flex items-center gap-2"
-          >
+          <a href="/" className="text-blue-500 font-bold text-sm md:text-lg flex items-center gap-2">
             Learn more
-            <ArrowRight className="text-[#3461FF] w-6 h-6" />
+            <ArrowRight className="text-[#3461FF] w-6 h-6"/>
           </a>
         </div>
       </section>
@@ -104,10 +92,10 @@ const Home: NextPage = () => {
       >
         <div className="md:w-1/2 space-y-12 md:h-1/2 py-4">
           <div className="space-y-2 md:space-y-4">
-            <h1 className="text-black font-medium text-3xl lg:text-6xl md:text-4xl">
+            <h1 className="text-black dark:text-white font-medium text-3xl lg:text-6xl md:text-4xl">
               How It Works
             </h1>
-            <p className="text-black w-full text-sm lg:text-lg md:text-sm">
+            <p className="text-black dark:text-slate-400 w-full text-sm lg:text-lg md:text-sm">
               We believe that the best way to create successful marketing
               campaigns is to work closely with our clients to understand their
               goals and challenges.
@@ -121,10 +109,10 @@ const Home: NextPage = () => {
           <div className="flex space-x-4 h-16 md:h-16 lg:h-28">
             <img src="/icon/majesticons_dollar-circle.png" alt="icon1" />
             <div>
-              <h1 className="text-black font-bold text-sm lg:text-2xl">
+              <h1 className="text-black dark:text-white font-bold text-sm lg:text-2xl">
                 Discovery
               </h1>
-              <p className="text-black text-xs xl:text-lg lg:text-md md:text-sm">
+              <p className="text-black dark:text-slate-400 text-xs xl:text-lg lg:text-md md:text-sm">
                 We meet with you to learn about your business, your goals, and
                 your target audience.
               </p>
@@ -133,10 +121,10 @@ const Home: NextPage = () => {
           <div className="flex space-x-4 h-16 md:h-16 lg:h-full">
             <img src="/icon/majesticons_dollar-circle (1).png" alt="icon2" />
             <div>
-              <h1 className="text-black font-bold text-sm lg:text-2xl">
+              <h1 className="text-black dark:text-white font-bold text-sm lg:text-2xl">
                 Strategy
               </h1>
-              <p className="text-black text-xs xl:text-lg lg:text-md md:text-sm">
+              <p className="text-black dark:text-slate-400 text-xs xl:text-lg lg:text-md md:text-sm">
                 We develop a customized marketing strategy that is based on your
                 unique needs and goals.
               </p>
@@ -145,10 +133,10 @@ const Home: NextPage = () => {
           <div className="flex space-x-4 h-16 md:h-16 lg:h-full">
             <img src="/icon/majesticons_dollar-circle (2).png" alt="icon3" />
             <div>
-              <h1 className="text-black font-bold text-sm lg:text-2xl">
+              <h1 className="text-black dark:text-white font-bold text-sm lg:text-2xl">
                 Execution
               </h1>
-              <p className="text-black text-xs xl:text-lg lg:text-md md:text-sm">
+              <p className="text-black dark:text-slate-400 text-xs xl:text-lg lg:text-md md:text-sm">
                 We execute our strategy using the latest digital marketing tools
                 and techniques.
               </p>
@@ -157,10 +145,10 @@ const Home: NextPage = () => {
           <div className="flex space-x-4 h-16 md:h-16 lg:h-full">
             <img src="/icon/majesticons_dollar-circle (3).png" alt="icon4" />
             <div>
-              <h1 className="text-black font-bold text-sm lg:text-2xl">
+              <h1 className="text-black dark:text-white font-bold text-sm lg:text-2xl">
                 Measurement
               </h1>
-              <p className="text-black text-xs xl:text-lg lg:text-md md:text-sm">
+              <p className="text-black dark:text-slate-400 text-xs xl:text-lg lg:text-md md:text-sm">
                 We track the results of our campaigns so that we can make
                 adjustments as needed.
               </p>
@@ -171,27 +159,27 @@ const Home: NextPage = () => {
       <section id="our-work" className="space-y-12 py-12 md:h-1/2">
         <div className="px-4 space-y-12">
           <div className="flex flex-col items-center space-y-2 lg:space-y-2">
-            <h1 className="text-black font-medium md:text-5xl text-4xl">
+            <h1 className="text-black dark:text-white font-medium md:text-5xl text-4xl">
               Our Work
             </h1>
-            <p className="text-black text-xs">A glimpse of our portofolio</p>
+            <p className="text-black dark:text-slate-400 text-xs">A glimpse of our portofolio</p>
           </div>
           <div className="grid-rows-3 gap-2 flex flex-col md:flex-row items-center justify-between px-8">
             <div className="space-y-2">
               <img src="/our-work/Rectangle 161.png" alt="apple" />
-              <h1 className="text-black font-bold flex justify-center">
+              <h1 className="text-black dark:text-white font-bold flex justify-center">
                 Apple
               </h1>
             </div>
             <div className="space-y-2">
               <img src="/our-work/Rectangle 161 (1).png" alt="apple" />
-              <h1 className="text-black font-bold flex justify-center">
+              <h1 className="text-black dark:text-white font-bold flex justify-center">
                 Coca Cola
               </h1>
             </div>
             <div className="space-y-2">
               <img src="/our-work/Rectangle 161 (2).png" alt="apple" />
-              <h1 className="text-black font-bold flex justify-center">Nike</h1>
+              <h1 className="text-black dark:text-white font-bold flex justify-center">Nike</h1>
             </div>
           </div>
           <div className="flex flex-col items-center">
@@ -247,7 +235,7 @@ const Home: NextPage = () => {
           </div>
           <div className="w-full sm:w-2/5 md:w-1/2 space-y-8 md:space-y-12 sm:space-y-24 py-4 sm:py-0 h-full">
             <div className="space-y-4">
-              <h1 className="text-black text-3xl sm:text-5xl font-semibold">
+              <h1 className="text-black dark:text-white text-3xl sm:text-5xl font-semibold">
                 Meet Our Team
               </h1>
               <p className="text-slate-400 md:w-2/3">
@@ -265,7 +253,7 @@ const Home: NextPage = () => {
         <div className="flex flex-col space-y-4 items-center">
           <div className="w-full">
             <div>
-              <h1 className="text-black text-2xl sm:text-3xl font-semibold sm:text-start text-center">
+              <h1 className="text-black dark:text-white text-2xl sm:text-3xl font-semibold sm:text-start text-center">
                 What Our Client Said About Us
               </h1>
             </div>
@@ -275,7 +263,7 @@ const Home: NextPage = () => {
             </div>
           </div>
           <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 w-full">
-            <div className="bg-[#FAFAFA] hover:bg-[#3461FF] text-black hover:text-white transition duration-300 ease-in-out p-8 flex flex-col rounded-2xl sm:w-4/5 md:w-1/3 space-y-2">
+            <div className="bg-[#FAFAFA] dark:bg-[#252526] dark:hover:bg-[#3461FF] hover:bg-[#3461FF] text-black dark:text-white hover:text-white transition duration-300 ease-in-out p-8 flex flex-col rounded-2xl sm:w-4/5 md:w-1/3 space-y-2">
               <div className="flex space-x-4">
                 <div>
                   <img
@@ -297,7 +285,7 @@ const Home: NextPage = () => {
                 </p>
               </div>
             </div>
-            <div className="bg-[#FAFAFA] hover:bg-[#3461FF] text-black hover:text-white transition duration-300 ease-in-out p-8 flex flex-col rounded-2xl sm:w-4/5 md:w-1/3 space-y-2">
+            <div className="bg-[#FAFAFA] dark:bg-[#252526] dark:hover:bg-[#3461FF] hover:bg-[#3461FF] text-black dark:text-white hover:text-white transition duration-300 ease-in-out p-8 flex flex-col rounded-2xl sm:w-4/5 md:w-1/3 space-y-2">
               <div className="flex space-x-4">
                 <div>
                   <img
@@ -320,7 +308,7 @@ const Home: NextPage = () => {
                 </p>
               </div>
             </div>
-            <div className="bg-[#FAFAFA] hover:bg-[#3461FF] text-black hover:text-white transition duration-300 ease-in-out p-8 flex flex-col rounded-2xl sm:w-4/5 md:w-1/3 space-y-2">
+            <div className="bg-[#FAFAFA] dark:bg-[#252526] dark:hover:bg-[#3461FF] hover:bg-[#3461FF] text-black dark:text-white hover:text-white transition duration-300 ease-in-out p-8 flex flex-col rounded-2xl sm:w-4/5 md:w-1/3 space-y-2">
               <div className="flex space-x-4">
                 <div>
                   <img
@@ -365,18 +353,18 @@ const Home: NextPage = () => {
         </div>
         <div className="flex flex-col space-y-8 md:space-y-0 md:space-x-0 md:flex-row px-8 md:py-12 md:px-24">
           <div className="md:w-3/5 md:pr-24 md:py-8">
-            <div className="border-t text-black text-xs md:text-lg py-4 md:py-8">
+            <div className="border-t text-black dark:text-white text-xs md:text-lg py-4 md:py-8">
               <h1>How do i sign up for the project</h1>
             </div>
-            <div className="border-b border-t text-xs md:text-lg text-black py-4 md:py-8">
+            <div className="border-b border-t text-xs md:text-lg text-black dark:text-white py-4 md:py-8">
               <h1>What thing that i should prepare before starting</h1>
             </div>
-            <div className="border-b text-black text-xs md:text-lg py-4 md:py-8">
+            <div className="border-b text-black dark:text-white text-xs md:text-lg py-4 md:py-8">
               <h1>Does my company need help for marketing advices</h1>
             </div>
           </div>
           <div className="md:w-2/5 md:space-y-8 space-y-2 py-2 flex flex-col">
-            <h1 className="text-black text-2xl md:text-4xl font-bold">
+            <h1 className="text-black dark:text-white text-2xl md:text-4xl font-bold">
               How We Can Help You?
             </h1>
             <p className="text-slate-400 lg:w-2/5">
@@ -399,13 +387,13 @@ const Home: NextPage = () => {
                 className="text-[#3461FF] font-semibold underline decoration-[#3461FF] flex items-center gap-2"
               >
                 More FAQ
-                <ArrowRight className="text-[#3461FF] w-6 h-6" />
+                <ArrowRight className="text-[#3461FF] w-6 h-6"/>
               </a>
             </div>
           </div>
         </div>
       </section>
-      <section className="bg-[#FAFAFA] dark:bg-[#0f0f0f] flex flex-col md:flex-row justify-between px-8 xl:px-24 py-12 md:px-12 md:py-8 space-y-8 md:space-y-0">
+      <section className="bg-[#FAFAFA] dark:bg-[#252526] flex flex-col md:flex-row justify-between px-8 xl:px-24 py-12 md:px-12 md:py-8 space-y-8 md:space-y-0">
         <div className="md:w-1/2 md:space-y-8 flex justify-between md:flex-col">
           <div className="space-y-8">
             <img src="/embrace.svg" alt="logo embrace" />
@@ -435,7 +423,7 @@ const Home: NextPage = () => {
             </button>
           </div>
         </div>
-        <div className="text-black w-full md:w-1/2 flex font-semibold gap-4 justify-between">
+        <div className="text-black dark:text-white w-full md:w-1/2 flex font-semibold gap-4 justify-between">
           <div className="space-y-4">
             <ul className="hover:scale-105">
               <a href="">Work With Us</a>
