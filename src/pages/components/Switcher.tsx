@@ -1,5 +1,5 @@
-import { setCookie } from 'cookies-next';
 import { useLayoutEffect, useState } from 'react';
+import { setCookie } from 'cookies-next';
 
 export default function Switcher(props: { onChange(): void, default: boolean }) {
 

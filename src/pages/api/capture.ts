@@ -25,7 +25,12 @@ export default async function handler(
     await page.goto(urlToCapture);
 
     // Wait for the element to be available [hashtag(#) is refer to element ID, dot(.) is refer to element's class]
-    await page.waitForSelector("#items");
+    try {
+      await page.waitForSelector("#items", { timeout: 5000 }); // Adjust the timeout as needed
+    } catch (error) {
+      // Handle the timeout, you can log a message or take other actions if needed
+      console.error("Timeout waiting for selector #items");
+    }
 
     const screenshotBuffer = await page.screenshot({ type: "png" });
 
