@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
-import { ArrowRight } from "./components/Icons";
-import React from 'react';
+import { ArrowRight, ButtonLeft, ButtonRight, PlusButton } from "./components/Icons";
+import React from "react";
 
 const Home: NextPage = () => {
   return (
@@ -80,9 +80,12 @@ const Home: NextPage = () => {
             We are committed to working with you collaboratively to understand
             your goals and create a strategy that will achieve them.
           </p>
-          <a href="/" className="text-blue-500 font-bold text-sm md:text-lg flex items-center gap-2">
+          <a
+            href="/"
+            className="text-blue-500 font-bold text-sm md:text-lg flex items-center gap-2"
+          >
             Learn more
-            <ArrowRight className="text-[#3461FF] w-6 h-6"/>
+            <ArrowRight className="text-[#3461FF] w-6 h-6" />
           </a>
         </div>
       </section>
@@ -162,7 +165,9 @@ const Home: NextPage = () => {
             <h1 className="text-black dark:text-white font-medium md:text-5xl text-4xl">
               Our Work
             </h1>
-            <p className="text-black dark:text-slate-400 text-xs">A glimpse of our portofolio</p>
+            <p className="text-black dark:text-slate-400 text-sm">
+              A glimpse of our portofolio
+            </p>
           </div>
           <div className="grid-rows-3 gap-2 flex flex-col md:flex-row items-center justify-between px-8">
             <div className="space-y-2">
@@ -179,7 +184,9 @@ const Home: NextPage = () => {
             </div>
             <div className="space-y-2">
               <img src="/our-work/Rectangle 161 (2).png" alt="apple" />
-              <h1 className="text-black dark:text-white font-bold flex justify-center">Nike</h1>
+              <h1 className="text-black dark:text-white font-bold flex justify-center">
+                Nike
+              </h1>
             </div>
           </div>
           <div className="flex flex-col items-center">
@@ -188,13 +195,14 @@ const Home: NextPage = () => {
             </button>
           </div>
           <div className="flex justify-center items-center h-1/2 py-4 md:px-8">
-            <div className="bg-[#3561FF] bg-[url('/elevate-your-brand/Background.png')] w-full rounded-2xl px-8 py-8 flex flex-row md:space-y-0">
+            <div className="bg-[#3561FF] bg-[url('/elevate-your-brand/Background.png')] w-full rounded-2xl px-8 py-8 flex flex-row md:space-y-0 relative h-64">
+              <span className="absolute left-0 right-0 top-0 bottom-0 bg-gradient-to-l from-blue-500 z-0 rounded-2xl"/>
               <div className="w-1/2">
                 <h1 className="flex items-center text-xl sm:text-3xl md:text-4xl font-medium w-1/2 h-full">
                   Elevate Your Brand Today!
                 </h1>
               </div>
-              <div className="w-1/2 flex flex-col space-y-4 md:space-y-10 md:py-6">
+              <div className="w-1/2 flex flex-col space-y-4 md:space-y-10 md:py-6 z-10">
                 <p className="text-xs md:text-lg lg:text-xl">
                   Ready to transform your digital dresence? Let's create magic
                   together! book our services now!
@@ -208,7 +216,7 @@ const Home: NextPage = () => {
         </div>
       </section>
       <section className="flex flex-col px-8 md:px-12 py-12 font-sans space-y-12">
-        <div className="flex flex-col md:flex-row w-full justify-center md:space-x-4">
+        <div className="flex flex-col md:flex-row w-full h-max justify-center md:space-x-4">
           <div className="flex flex-col gap-2 md:w-1/2">
             <div className="flex gap-2">
               <div className="w-1/3">
@@ -233,8 +241,8 @@ const Home: NextPage = () => {
               </div>
             </div>
           </div>
-          <div className="w-full sm:w-2/5 md:w-1/2 space-y-8 md:space-y-12 sm:space-y-24 py-4 sm:py-0 h-full">
-            <div className="space-y-4">
+          <div className="w-full sm:w-2/5 md:w-1/2 py-4 sm:py-0 px-8 min-h-max flex flex-col justify-between">
+            <div className="flex flex-col gap-4">
               <h1 className="text-black dark:text-white text-3xl sm:text-5xl font-semibold">
                 Meet Our Team
               </h1>
@@ -243,23 +251,21 @@ const Home: NextPage = () => {
                 innovation and artistry to craft digital wonders that captivate
               </p>
             </div>
-            <div>
-              <button className="bg-[#3461FF] rounded-full py-2 px-4">
-                Learn more
-              </button>
-            </div>
+            <button className="bg-[#3461FF] rounded-full py-3 px-2 w-2/5">
+              Learn more
+            </button>
           </div>
         </div>
         <div className="flex flex-col space-y-4 items-center">
-          <div className="w-full">
+          <div className="w-full flex justify-between">
             <div>
               <h1 className="text-black dark:text-white text-2xl sm:text-3xl font-semibold sm:text-start text-center">
                 What Our Client Said About Us
               </h1>
             </div>
             <div className="space-x-2 hidden md:flex">
-              <button></button>
-              <button></button>
+              <button className="w-12 aspect-square rounded-full bg-gray-200 hover:bg-blue-500"><ButtonLeft className=""/></button>
+              <button className="w-12 aspect-square rounded-full bg-gray-200 hover:bg-blue-500"><ButtonRight className=""/></button>
             </div>
           </div>
           <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 w-full">
@@ -353,14 +359,17 @@ const Home: NextPage = () => {
         </div>
         <div className="flex flex-col space-y-8 md:space-y-0 md:space-x-0 md:flex-row px-8 md:py-12 md:px-24">
           <div className="md:w-3/5 md:pr-24 md:py-8">
-            <div className="border-t text-black dark:text-white text-xs md:text-lg py-4 md:py-8">
+            <div className="border-t text-black dark:text-white text-xs md:text-lg py-4 md:py-8 flex justify-between">
               <h1>How do i sign up for the project</h1>
+              <button><PlusButton className="w-6"/></button>
             </div>
-            <div className="border-b border-t text-xs md:text-lg text-black dark:text-white py-4 md:py-8">
+            <div className="border-b border-t text-xs md:text-lg text-black dark:text-white py-4 md:py-8 flex justify-between">
               <h1>What thing that i should prepare before starting</h1>
+              <button><PlusButton className="w-6"/></button>
             </div>
-            <div className="border-b text-black dark:text-white text-xs md:text-lg py-4 md:py-8">
+            <div className="border-b text-black dark:text-white text-xs md:text-lg py-4 md:py-8 flex justify-between">
               <h1>Does my company need help for marketing advices</h1>
+              <button><PlusButton className="w-6"/></button>
             </div>
           </div>
           <div className="md:w-2/5 md:space-y-8 space-y-2 py-2 flex flex-col">
@@ -387,7 +396,7 @@ const Home: NextPage = () => {
                 className="text-[#3461FF] font-semibold underline decoration-[#3461FF] flex items-center gap-2"
               >
                 More FAQ
-                <ArrowRight className="text-[#3461FF] w-6 h-6"/>
+                <ArrowRight className="text-[#3461FF] w-6 h-6" />
               </a>
             </div>
           </div>
